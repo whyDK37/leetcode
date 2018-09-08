@@ -1,4 +1,4 @@
-package algorithms.twoSum;
+package leetcode;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,9 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * 2018-8-21
+ */
 class Solution {
   public int[] twoSum(int[] nums, int target) {
     // key: value, value:index
@@ -25,7 +27,7 @@ class Solution {
   }
 }
 
-public class MainClass {
+public class TwoSum {
   public static int[] stringToIntegerArray(String input) {
     input = input.trim();
     input = input.substring(1, input.length() - 1);
