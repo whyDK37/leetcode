@@ -9,5 +9,6 @@ leetcode
 |---| ----- | -------- | ---------- |
 |1|Two Sum| [java](./src/main/java/leetcode/TwoSum.java)|Easy|
 |2|Add Two Numbers| [java](./src/main/java/leetcode/AddTwoNumbers.java)|Medium|
+|3|Longest Substring Without Repeating Characters| [java](./src/main/java/leetcode/LongestSubstringWithoutRepeatingCharacters.java)|Medium|
 
 
