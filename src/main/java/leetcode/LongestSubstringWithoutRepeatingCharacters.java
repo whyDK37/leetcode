@@ -30,10 +30,10 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
   public static void main(String[] args) {
     Solution solution = new Solution();
-    System.out.println(solution.lengthOfLongestSubstring("anviaj"));
-    System.out.println(solution.lengthOfLongestSubstring("aab"));
-    System.out.println(solution.lengthOfLongestSubstring("abcabcbb"));
-    System.out.println(solution.lengthOfLongestSubstring("bbbbb"));
-    System.out.println(solution.lengthOfLongestSubstring("pwwkew"));
+    System.out.println(solution.lengthOfLongestSubstring("anviaj") == 5);
+    System.out.println(solution.lengthOfLongestSubstring("aab") == 2);
+    System.out.println(solution.lengthOfLongestSubstring("abcabcbb") == 3);
+    System.out.println(solution.lengthOfLongestSubstring("bbbbb") == 1);
+    System.out.println(solution.lengthOfLongestSubstring("pwwkew") == 3);
   }
 }
