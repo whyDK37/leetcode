@@ -4,3 +4,11 @@
 .idea/
 leetcode.iml
 out/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+*.settings/
+*bin/
+.vscode/
