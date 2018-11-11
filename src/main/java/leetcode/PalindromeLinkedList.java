@@ -39,7 +39,7 @@ public class PalindromeLinkedList {
         // revers first part
         ListNode cur = head;
         ListNode reverseHead = null;
-        ListNode pre = null;
+        ListNode pre;
         while (cur != slow) {
             ListNode cn = cur.next;
             pre = reverseHead;
