@@ -11,6 +11,7 @@ leetcode
 |4#|[median-of-two-sorted-arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)| [java](./src/main/java/leetcode/MedianOfTwoSortedArrays.java)|Hard|
 |7|[reverse-integer](https://leetcode.com/problems/reverse-integer/)| [java](./src/main/java/leetcode/ReverseInteger.java)|Easy|
 |9|[palindrome-number](https://leetcode.com/problems/palindrome-number/)| [java](./src/main/java/leetcode/PalindromeNumber.java)|Easy|
+|125#|[valid-palindrome](https://leetcode.com/problems/valid-palindrome/)| [java](./src/main/java/leetcode/ValidPalindrome.java)|Easy|
 |234|[palindrome-linked-list](https://leetcode.com/problems/palindrome-linked-list/)| [java](./src/main/java/leetcode/PalindromeLinkedList.java)|Easy|
 
 
