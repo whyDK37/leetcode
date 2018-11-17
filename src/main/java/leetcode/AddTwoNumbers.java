@@ -24,19 +24,19 @@ public class AddTwoNumbers {
     }
   }
 
-  static class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-      val = x;
-    }
-
-    ListNode setNext(ListNode next) {
-      this.next = next;
-      return this;
-    }
-  }
+//  static class ListNode {
+//    int val;
+//    ListNode next;
+//
+//    ListNode(int x) {
+//      val = x;
+//    }
+//
+//    ListNode setNext(ListNode next) {
+//      this.next = next;
+//      return this;
+//    }
+//  }
 
   public static void main(String[] args) {
     Solution solution = new Solution();

@@ -1,6 +1,5 @@
 package leetcode;
 
-import leetcode.ReverseLinkedList.ListNode;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;

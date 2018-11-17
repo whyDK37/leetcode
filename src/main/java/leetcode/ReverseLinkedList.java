@@ -3,14 +3,14 @@ package leetcode;
 public class ReverseLinkedList {
 
     //     Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
+//    public static class ListNode {
+//        int val;
+//        ListNode next;
+//
+//        ListNode(int x) {
+//            val = x;
+//        }
+//    }
 
     public static ListNode reverseList(ListNode head) {
         if (head == null) return null;

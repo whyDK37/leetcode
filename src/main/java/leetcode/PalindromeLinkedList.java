@@ -3,19 +3,7 @@ package leetcode;
 public class PalindromeLinkedList {
 
     //     Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode(int x) {
-            val = x;
-        }
-
-        ListNode(int x, ListNode next) {
-            val = x;
-            this.next = next;
-        }
-    }
 
     public boolean isPalindrome(ListNode head) {
         if (head == null) return true;
