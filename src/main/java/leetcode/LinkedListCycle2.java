@@ -23,13 +23,12 @@ public class LinkedListCycle2 {
 
         if (!hasCycle) return null;
 
-        while (head != null && slow != null) {
-            if (head == slow) return slow;
+        while (head != slow) {
             head = head.next;
             slow = slow.next;
         }
 
-        return null;
+        return slow;
     }
 
 }
