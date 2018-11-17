@@ -16,6 +16,7 @@ leetcode
 |141|[linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)| [java](./src/main/java/leetcode/LinkedListCycle.java)|Easy|
 |142|[linked-list-cycle-ii](https://leetcode.com/problems/linked-list-cycle-ii)| [java](./src/main/java/leetcode/LinkedListCycle2.java)|Easy|
 |206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)| [java](./src/main/java/leetcode/ReverseLinkedList.java)|Easy|
+|237|[delete-node-in-a-linked-list](https://leetcode.com/problems/delete-node-in-a-linked-list/)| [java](./src/main/java/leetcode/DeleteNodeInALinkedList.java)|Easy|
 |234|[palindrome-linked-list](https://leetcode.com/problems/palindrome-linked-list/)| [java](./src/main/java/leetcode/PalindromeLinkedList.java)|Easy|
 
 
