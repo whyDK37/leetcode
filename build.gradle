@@ -4,7 +4,7 @@ apply plugin: 'maven'
 group = 'me.pinenut'
 version = '0.0.1-SNAPSHOT'
 
-description = """leetcode"""
+description = "leetcode"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
