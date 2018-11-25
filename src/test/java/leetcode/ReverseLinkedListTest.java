@@ -2,8 +2,6 @@ package leetcode;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-
 public class ReverseLinkedListTest {
 
     @Test
@@ -20,10 +18,7 @@ public class ReverseLinkedListTest {
         four.next = five;
 
         ListNode listNode = ReverseLinkedList.reverseList(head);
-        while (listNode != null) {
-            System.out.println(listNode.val);
-            listNode = listNode.next;
-        }
+        ListNodeUtil.equals(listNode, new int[]{5, 4, 3, 2, 1});
 
 
     }
