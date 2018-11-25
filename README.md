@@ -11,6 +11,7 @@ leetcode
 |7|[reverse-integer](https://leetcode.com/problems/reverse-integer/)| [java](./src/main/java/leetcode/ReverseInteger.java)|Easy|
 |9|[palindrome-number](https://leetcode.com/problems/palindrome-number/)| [java](./src/main/java/leetcode/PalindromeNumber.java)|Easy|
 |21|[valid-palindrome](https://leetcode.com/problems/merge-two-sorted-lists/)| [java](./src/main/java/leetcode/MergeTwoSortedLists.java)|Easy|
+|92|[reverse-linked-list-ii](https://leetcode.com/problems/reverse-linked-list-ii/)| [java](./src/main/java/leetcode/ReverseLinkedList2.java)|Medium|
 |141|[linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)| [java](./src/main/java/leetcode/LinkedListCycle.java)|Easy|
 |142|[linked-list-cycle-ii](https://leetcode.com/problems/linked-list-cycle-ii)| [java](./src/main/java/leetcode/LinkedListCycle2.java)|Easy|
 |160|[intersection-of-two-linked-lists](https://leetcode.com/problems/intersection-of-two-linked-lists)| [java](./src/main/java/leetcode/IntersectionOfTwoLinkedLists.java)|Easy|

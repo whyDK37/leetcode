@@ -19,4 +19,11 @@ public class ListNode {
         this.next = next;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                '}';
+    }
 }
