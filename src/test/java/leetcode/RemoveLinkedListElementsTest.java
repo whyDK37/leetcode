@@ -2,8 +2,6 @@ package leetcode;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-
 public class RemoveLinkedListElementsTest {
 
     @Test

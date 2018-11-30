@@ -21,4 +21,21 @@ public class ListNodeUtil {
             Assert.assertEquals(integers[i].intValue(), ints[i]);
         }
     }
+
+    public static ListNode createList(int[] arr) {
+        ListNode sentinal = new ListNode(0);
+
+        ListNode curr = sentinal;
+        for (int i : arr) {
+            curr.next = new ListNode(i);
+            curr = curr.next;
+        }
+
+        return sentinal.next;
+    }
+
+    public static void main(String[] args) {
+        ListNode list = createList(new int[]{1, 2, 3, 4});
+        equals(list, new int[]{1, 2, 3, 4});
+    }
 }
