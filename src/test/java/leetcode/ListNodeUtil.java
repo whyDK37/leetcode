@@ -37,5 +37,7 @@ public class ListNodeUtil {
     public static void main(String[] args) {
         ListNode list = createList(new int[]{1, 2, 3, 4});
         equals(list, new int[]{1, 2, 3, 4});
+
+
     }
 }
