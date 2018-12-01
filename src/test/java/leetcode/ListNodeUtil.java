@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ListNodeUtil {
 
-    public static void equals(ListNode head, int[] ints) {
+    public static void equalsNode(ListNode head, int[] ints) {
         List<Integer> nodeArr = new ArrayList<>();
         while (head != null) {
             nodeArr.add(head.val);
@@ -36,7 +36,7 @@ public class ListNodeUtil {
 
     public static void main(String[] args) {
         ListNode list = createList(new int[]{1, 2, 3, 4});
-        equals(list, new int[]{1, 2, 3, 4});
+        equalsNode(list, new int[]{1, 2, 3, 4});
 
 
     }

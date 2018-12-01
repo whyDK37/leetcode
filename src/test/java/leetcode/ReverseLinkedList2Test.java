@@ -2,13 +2,15 @@ package leetcode;
 
 import org.testng.annotations.Test;
 
+import static leetcode.ListNodeUtil.equalsNode;
+
 public class ReverseLinkedList2Test {
 
     @Test
     public void testReverseBetween() {
 
 
-        ListNodeUtil.equals(ReverseLinkedList2.reverseBetween(new ListNode(3,
+        equalsNode(ReverseLinkedList2.reverseBetween(new ListNode(3,
                         new ListNode(5)),
                 1, 2),
                 new int[]{5, 3});
@@ -25,7 +27,7 @@ public class ReverseLinkedList2Test {
         four.next = five;
 
         ListNode listNode = ReverseLinkedList2.reverseBetween(head, 2, 4);
-        ListNodeUtil.equals(listNode, new int[]{1, 4, 3, 2, 5});
+        ListNodeUtil.equalsNode(listNode, new int[]{1, 4, 3, 2, 5});
 
 
 
