@@ -6,34 +6,23 @@ import java.util.Map;
 
 public class AllPathsFromSourceToTarget {
 
-  static class Solution {
-    public int lengthOfLongestSubstring(String s) {
-      Map<Character, Boolean> booleanMap = new HashMap<>();
-      char[] chars = s.toCharArray();
-      int length = 0;
-      for (int i = 0; i < chars.length; i++) {
-        booleanMap.put(chars[i], Boolean.TRUE);
-        for (int j = i + 1; j < chars.length; j++) {
-          if (booleanMap.containsKey(chars[j])) {
-            break;
-          } else {
-            booleanMap.put(chars[j], Boolean.TRUE);
-          }
+    public static int lengthOfLongestSubstring(String s) {
+        Map<Character, Boolean> booleanMap = new HashMap<>();
+        char[] chars = s.toCharArray();
+        int length = 0;
+        for (int i = 0; i < chars.length; i++) {
+            booleanMap.put(chars[i], Boolean.TRUE);
+            for (int j = i + 1; j < chars.length; j++) {
+                if (booleanMap.containsKey(chars[j])) {
+                    break;
+                } else {
+                    booleanMap.put(chars[j], Boolean.TRUE);
+                }
+            }
+            length = length > booleanMap.size() ? length : booleanMap.size();
+            if (length == (chars.length - i)) break;
+            booleanMap.clear();
         }
-        length = length > booleanMap.size() ? length : booleanMap.size();
-        if (length == (chars.length - i)) break;
-        booleanMap.clear();
-      }
-      return length;
+        return length;
     }
-  }
-
-  public static void main(String[] args) {
-    Solution solution = new Solution();
-    System.out.println(solution.lengthOfLongestSubstring("anviaj") == 5);
-    System.out.println(solution.lengthOfLongestSubstring("aab") == 2);
-    System.out.println(solution.lengthOfLongestSubstring("abcabcbb") == 3);
-    System.out.println(solution.lengthOfLongestSubstring("bbbbb") == 1);
-    System.out.println(solution.lengthOfLongestSubstring("pwwkew") == 3);
-  }
 }
