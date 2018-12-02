@@ -2,7 +2,7 @@ package leetcode;
 
 import org.testng.annotations.Test;
 
-import static leetcode.ListNodeUtil.equalsNode;
+import static leetcode.ListNodeUtil.equalsListNode;
 
 public class ReverseLinkedList2Test {
 
@@ -10,7 +10,7 @@ public class ReverseLinkedList2Test {
     public void testReverseBetween() {
 
 
-        equalsNode(ReverseLinkedList2.reverseBetween(new ListNode(3,
+        equalsListNode(ReverseLinkedList2.reverseBetween(new ListNode(3,
                         new ListNode(5)),
                 1, 2),
                 new int[]{5, 3});
@@ -27,7 +27,7 @@ public class ReverseLinkedList2Test {
         four.next = five;
 
         ListNode listNode = ReverseLinkedList2.reverseBetween(head, 2, 4);
-        ListNodeUtil.equalsNode(listNode, new int[]{1, 4, 3, 2, 5});
+        ListNodeUtil.equalsListNode(listNode, new int[]{1, 4, 3, 2, 5});
 
 
 

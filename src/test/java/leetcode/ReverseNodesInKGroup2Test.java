@@ -4,9 +4,10 @@ import org.testng.annotations.Test;
 
 import static leetcode.ListNodeUtil.createListNode;
 import static leetcode.ListNodeUtil.equalsListNode;
-import static leetcode.ReverseNodesInKGroup.reverseKGroup;
+import static leetcode.ReverseNodesInKGroup2.reverseKGroup;
+import static org.testng.Assert.*;
 
-public class ReverseNodesInKGroupTest {
+public class ReverseNodesInKGroup2Test {
 
     @Test
     public void testReverseKGroup() {

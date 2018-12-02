@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ListNodeUtil {
 
-    public static void equalsNode(ListNode head, int[] ints) {
+    public static void equalsListNode(ListNode head, int[] ints) {
         List<Integer> nodeArr = new ArrayList<>();
         while (head != null) {
             nodeArr.add(head.val);
@@ -22,7 +22,7 @@ public class ListNodeUtil {
         }
     }
 
-    public static ListNode createList(int[] arr) {
+    public static ListNode createListNode(int[] arr) {
         ListNode sentinal = new ListNode(0);
 
         ListNode curr = sentinal;
@@ -34,10 +34,19 @@ public class ListNodeUtil {
         return sentinal.next;
     }
 
-    public static void main(String[] args) {
-        ListNode list = createList(new int[]{1, 2, 3, 4});
-        equalsNode(list, new int[]{1, 2, 3, 4});
+    public static void printListNode(ListNode listNode) {
+        if (listNode == null) {
+            System.out.println("[]");
+            return;
+        }
 
-
+        ListNode next = listNode;
+        StringBuilder sb = new StringBuilder();
+        while (next != null) {
+            sb.append(next.val).append("->");
+            next = next.next;
+        }
+        sb.delete(sb.length() - 2, sb.length());
+        System.out.println("[" + sb + "]");
     }
 }
