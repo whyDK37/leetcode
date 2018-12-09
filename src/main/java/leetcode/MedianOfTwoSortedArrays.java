@@ -4,53 +4,38 @@ package leetcode;
 public class MedianOfTwoSortedArrays {
 
 
-    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int m = nums1.length, n = nums2.length;
-
-        int i = 0;
-        int j = 0;
-        boolean odd = ((m + n) & 1) == 1;
-        int half = (m + n) / 2;
-        while (true) {
-            if ((i + j) == half) {
-                break;
-            }
-
-            int right = right(nums1, i);
-            int right2 = right(nums2, j);
-            if (right > right2 && j < n) {
-                j++;
-            } else {
-                i++;
+    public static double findMedianSortedArrays(int[] A, int[] B) {
+        int m = A.length;
+        int n = B.length;
+        if (m > n) {
+            int[] temp = A;
+            A = B;
+            B = temp;
+            int tmp = m;
+            m = n;
+            n = tmp;
+        }
+        int min = 0;
+        int max = m;
+        int halfLen = (m + n + 1) / 2;
+        while (min <= max) {
+            int i = (min + max) / 2;
+            int j = halfLen - i;
+            if (i < max && B[j - 1] > A[i]) min = i + 1;
+            else if (i > min && A[i - 1] > B[j]) max = i - 1;
+            else {
+                int maxLeft = 0;
+                if (i == 0) maxLeft = B[j - 1];
+                else if (j == 0) maxLeft = A[i - 1];
+                else maxLeft = (Math.max(B[j - 1], A[i - 1]));
+                if ((m + n) % 2 == 1) return maxLeft;
+                int minRight = 0;
+                if (i == m) minRight = B[j];
+                else if (j == n) minRight = A[i];
+                else minRight = Math.min(B[j], A[i]);
+                return (maxLeft + minRight) / 2.0;
             }
         }
-
-        if (odd) {
-            int right = right(nums1, i);
-            int right2 = right(nums2, j);
-            return right > right2 ? right2 : right;
-        } else {
-            double l = maxLeft(nums1, nums2, i, j);
-            double r = minRight(nums1, nums2, i, j);
-            return (l + r) / 2;
-        }
-
-    }
-
-    public static int maxLeft(int[] nums1, int[] nums2, int i, int j) {
-        int maxI = i > 0 ? nums1[i - 1] : Integer.MIN_VALUE;
-        int maxJ = j > 0 ? nums2[j - 1] : Integer.MIN_VALUE;
-        return maxI > maxJ ? maxI : maxJ;
-    }
-
-    public static int minRight(int[] nums1, int[] nums2, int i, int j) {
-        int minI = (i == nums1.length) ? Integer.MAX_VALUE : nums1[i];
-        int minJ = (j == nums2.length) ? Integer.MAX_VALUE : nums2[j];
-        return minI > minJ ? minJ : minI;
-    }
-
-
-    public static int right(int[] nums, int index) {
-        return (index == nums.length) ? Integer.MAX_VALUE : nums[index];
+        return 0.0;
     }
 }
