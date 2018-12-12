@@ -9,6 +9,7 @@ leetcode
 |2|[add-two-numbers](https://leetcode.com/articles/add-two-numbers/)| [java](./src/main/java/leetcode/AddTwoNumbers.java)|Medium|
 |3|[longest-substring-without-repeating-characters](https://leetcode.com/articles/longest-substring-without-repeating-characters/)| [java](./src/main/java/leetcode/LongestSubstringWithoutRepeatingCharacters.java)|Medium|
 |4|[median-of-two-sorted-arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)| [java](./src/main/java/leetcode/MedianOfTwoSortedArrays.java)|Hard|
+|5|[longest-palindromic-substring](https://leetcode.com/problems/longest-palindromic-substring/)| [java](./src/main/java/leetcode/LongestPalindromicSubstring.java)|Medium|
 |7|[reverse-integer](https://leetcode.com/problems/reverse-integer/)| [java](./src/main/java/leetcode/ReverseInteger.java)|Easy|
 |9|[string-to-integer-atoi](https://leetcode.com/problems/string-to-integer-atoi/)| [java](./src/main/java/leetcode/String2IntegerAtoi.java)|Easy|
 |9|[palindrome-number](https://leetcode.com/problems/palindrome-number/)| [java](./src/main/java/leetcode/PalindromeNumber.java)|Easy|
@@ -22,6 +23,7 @@ leetcode
 |206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)| [java](./src/main/java/leetcode/ReverseLinkedList.java)|Easy|
 |237|[delete-node-in-a-linked-list](https://leetcode.com/problems/delete-node-in-a-linked-list/)| [java](./src/main/java/leetcode/DeleteNodeInALinkedList.java)|Easy|
 |234|[palindrome-linked-list](https://leetcode.com/problems/palindrome-linked-list/)| [java](./src/main/java/leetcode/PalindromeLinkedList.java)|Easy|
+|234|[jewels-and-stones](https://leetcode.com/problems/jewels-and-stones/)| [java](./src/main/java/leetcode/JewelsAndStones.java)|Easy|
 
 
 # 其他人的 leetcode
