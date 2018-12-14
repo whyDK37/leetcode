@@ -16,6 +16,7 @@ leetcode
 |10|[regular-expression-matching](https://leetcode.com/problems/regular-expression-matching/)| [java](./src/main/java/leetcode/RegularExpressionMatching.java)|Hard|
 |21|[merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/)| [java](./src/main/java/leetcode/MergeTwoSortedLists.java)|Easy|
 |25|[reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/)| [java](./src/main/java/leetcode/ReverseNodesInKGroup.java)|Hard|
+|58|[length-of-last-word](https://leetcode.com/problems/length-of-last-word/)| [java](./src/main/java/leetcode/LengthOfLastWord.java)|Easy|
 |92|[reverse-linked-list-ii](https://leetcode.com/problems/reverse-linked-list-ii/)| [java](./src/main/java/leetcode/ReverseLinkedList2.java)|Medium|
 |141|[linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)| [java](./src/main/java/leetcode/LinkedListCycle.java)|Easy|
 |142|[linked-list-cycle-ii](https://leetcode.com/problems/linked-list-cycle-ii)| [java](./src/main/java/leetcode/LinkedListCycle2.java)|Easy|
