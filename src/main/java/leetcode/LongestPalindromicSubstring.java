@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.Arrays;
+
 /**
  * https://articles.leetcode.com/longest-palindromic-substring-part-i/
  * An O(N) Solution (Manacher’s Algorithm):
@@ -7,7 +9,7 @@ package leetcode;
  */
 public class LongestPalindromicSubstring {
     public static String longestPalindrome(String s) {
-        if (s == null || s.length() == 0) return null;
+        if (s == null || s.length() == 0 || s.length() == 1) return s;
 
         char[] chars = s.toCharArray();
         char[] T = new char[chars.length * 2 + 1];
@@ -19,39 +21,48 @@ public class LongestPalindromicSubstring {
             T[indexT++] = '#';
         }
 
-        System.out.println(T);
-        System.out.println(P);
+//        System.out.println(Arrays.toString(T));
 
-        int indexP = 0;
-        P[indexP++] = 0;
         // if P[ i’ ] ≤ R – i,
         //   then P[ i ] ← P[ i’ ]
         // else P[ i ] ≥ P[ i’ ]. (Which we have to expand past the right edge (R) to find P[ i ].
-        int i = 0;
-        int R = 2;
-        int c = 1;
-        while (R < T.length) {
-            i++;
-            if (P[c - i] <= (R - i)) {
-                P[i] = P[c - i];
-                indexP++;
+        int R = 0;
+        int c = 0;
+        for (int i = 1; i < T.length; i++) {
+            int i_mirror = 2 * c - i;// equals to i' = C - (i-C)
+
+            if (i_mirror >= 0 && P[i_mirror] < R - i) {
+                P[i] = P[i_mirror];
             } else {
                 P[i] = calcP(T, i);
-                c = R;
-                i = 0;
             }
-            R++;
+
+            if (i + P[i] > R) {
+                c = i;
+                R = i + P[i];
+            }
+        }
+//        System.out.println(Arrays.toString(P));
+
+        int maxLen = 0;
+        int centerIndex = 0;
+        for (int i = 1; i < T.length; i++) {
+            if (P[i] > maxLen) {
+                maxLen = P[i];
+                centerIndex = i;
+            }
         }
 
-        return null;
+        int beginIndex = (centerIndex - maxLen) / 2;
+        return s.substring(beginIndex, beginIndex + maxLen);
     }
 
-    private static int calcP(char[] T, int center) {
-        int num = 0;
-        while (T.length > center + num && center - num > 0) {
-            num++;
+    static int calcP(char[] T, int center) {
+        int num = 1;
+        while (T.length > center + num && center - num >= 0) {
             if (T[center + num] != T[center - num]) break;
+            num++;
         }
-        return num;
+        return num - 1;
     }
 }
