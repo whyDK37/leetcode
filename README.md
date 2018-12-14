@@ -11,9 +11,10 @@ leetcode
 |4|[median-of-two-sorted-arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)| [java](./src/main/java/leetcode/MedianOfTwoSortedArrays.java)|Hard|
 |5|[longest-palindromic-substring](https://leetcode.com/problems/longest-palindromic-substring/)| [java](./src/main/java/leetcode/LongestPalindromicSubstring.java)|Medium|
 |7|[reverse-integer](https://leetcode.com/problems/reverse-integer/)| [java](./src/main/java/leetcode/ReverseInteger.java)|Easy|
-|9|[string-to-integer-atoi](https://leetcode.com/problems/string-to-integer-atoi/)| [java](./src/main/java/leetcode/String2IntegerAtoi.java)|Easy|
+|8|[string-to-integer-atoi](https://leetcode.com/problems/string-to-integer-atoi/)| [java](./src/main/java/leetcode/String2IntegerAtoi.java)|Medium|
 |9|[palindrome-number](https://leetcode.com/problems/palindrome-number/)| [java](./src/main/java/leetcode/PalindromeNumber.java)|Easy|
-|21|[valid-palindrome](https://leetcode.com/problems/merge-two-sorted-lists/)| [java](./src/main/java/leetcode/MergeTwoSortedLists.java)|Easy|
+|10|[regular-expression-matching](https://leetcode.com/problems/regular-expression-matching/)| [java](./src/main/java/leetcode/RegularExpressionMatching.java)|Hard|
+|21|[merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/)| [java](./src/main/java/leetcode/MergeTwoSortedLists.java)|Easy|
 |25|[reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/)| [java](./src/main/java/leetcode/ReverseNodesInKGroup.java)|Hard|
 |92|[reverse-linked-list-ii](https://leetcode.com/problems/reverse-linked-list-ii/)| [java](./src/main/java/leetcode/ReverseLinkedList2.java)|Medium|
 |141|[linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)| [java](./src/main/java/leetcode/LinkedListCycle.java)|Easy|

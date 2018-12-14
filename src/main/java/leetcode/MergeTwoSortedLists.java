@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.List;
-
 /**
  */
 public class MergeTwoSortedLists {
@@ -20,7 +18,7 @@ public class MergeTwoSortedLists {
             } else if (l1.val <= l2.val) {
                 next = l1;
                 l1 = l1.next;
-            } else if (l1.val > l2.val) {
+            } else {
                 next = l2;
                 l2 = l2.next;
             }
