@@ -1,8 +1,5 @@
 package leetcode;
 
-
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 /**
  * 2018-9-8
  */

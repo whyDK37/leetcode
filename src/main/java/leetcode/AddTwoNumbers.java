@@ -1,9 +1,6 @@
 package leetcode;
 
 
-/**
- * 2018-9-8
- */
 public class AddTwoNumbers {
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
