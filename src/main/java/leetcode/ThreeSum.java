@@ -5,37 +5,43 @@ import java.util.*;
 
 public class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
-        if (nums == null || nums.length < 3) return new ArrayList<>();
+        if (nums.length < 3)
+            return new ArrayList<>();
+        Arrays.sort(nums);
+        List<List<Integer>> resultList = new ArrayList<>();
+        for (int i = 0; i < nums.length - 1; i++) {
 
-        // using a map to store value and index mapping
-        List<List<Integer>> result = new ArrayList<>();
-        Map<Integer, Set<Integer>> indexMap = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            indexMap.computeIfAbsent(nums[i], integer -> new HashSet<>());
-            indexMap.get(nums[i]).add(i);
-        }
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue;
 
-        //
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                int remain = 0 - (nums[i] + nums[j]);
-                Set<Integer> indexSet = indexMap.get(remain);
-                if (indexSet != null) {
-                    int index = -1;
-                    for (Integer integer : indexSet) {
-                        if (integer != i && integer != j) index = integer;
+            int complement = -nums[i];
+            int left = i + 1;
+            int right = nums.length - 1;
+            while (left < right) {
+                int sum = nums[left] + nums[right];
+                if (sum == complement) {
+                    List<Integer> tempList = new ArrayList<>(3);
+                    tempList.add(nums[i]);
+                    tempList.add(nums[left]);
+                    tempList.add(nums[right]);
+                    resultList.add(tempList);
+
+
+                    // skip same element
+                    left++;
+                    right--;
+                    while (left < right && left > 0 && nums[left] == nums[left - 1]) {
+                        left++;
+                    }
+                    while (left < right && right < nums.length - 1 && nums[right] == nums[right + 1]) {
+                        right--;
                     }
 
-                    if (index > j) {
-                        List<Integer> row = new ArrayList<>(6);
-                        row.add(nums[i]);
-                        row.add(nums[j]);
-                        row.add(nums[index]);
-                        result.add(row);
-                    }
-                }
+                } else if (sum < complement)
+                    left++;
+                else right--;
             }
         }
-        return result;
+        return resultList;
     }
 }
