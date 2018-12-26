@@ -20,6 +20,7 @@ leetcode
 |19|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| [java](./src/main/java/leetcode/RemoveNthNodeFromEndofList.java)|Medium|
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)| [java](./src/main/java/leetcode/ValidParentheses.java)|Easy|
 |21|[merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/)| [java](./src/main/java/leetcode/MergeTwoSortedLists.java)|Easy|
+|22*|[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)| [java](./src/main/java/leetcode/GenerateParentheses.java)|Medium|
 |25|[reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/)| [java](./src/main/java/leetcode/ReverseNodesInKGroup.java)|Hard|
 |58|[length-of-last-word](https://leetcode.com/problems/length-of-last-word/)| [java](./src/main/java/leetcode/LengthOfLastWord.java)|Easy|
 |92|[reverse-linked-list-ii](https://leetcode.com/problems/reverse-linked-list-ii/)| [java](./src/main/java/leetcode/ReverseLinkedList2.java)|Medium|
@@ -35,4 +36,6 @@ leetcode
 
 # 其他人的 leetcode
 - [陈浩的 leetcode](https://github.com/haoel/leetcode)
-- [朝光的 leetcode](https://github.com/hcghaha/algorithms-learning) [leetcode](https://leetcode.com/huangchgu/)
+- [朝光的 leetcode](https://leetcode.com/huangchgu/) [github](https://github.com/hcghaha/algorithms-learning)
+- [云强的 leetcode](https://leetcode.com/supermaster007/)
+- [我的   leetcode](https://leetcode.com/whydk37/)
