@@ -22,7 +22,8 @@ public class ListNodeUtil {
         }
     }
 
-    public static ListNode createListNode(int[] arr) {
+
+    public static ListNode createListNode(int... arr) {
         ListNode sentinal = new ListNode(0);
 
         ListNode curr = sentinal;
