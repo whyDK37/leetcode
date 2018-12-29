@@ -4,7 +4,7 @@ package leetcode;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class MergekSortedLists {
+public class MergeKSortedLists {
 
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode dump = new ListNode(0);
@@ -23,8 +23,9 @@ public class MergekSortedLists {
             }
         }
 
-        for (ListNode listNode : priorityQueue) {
-            curr.next = listNode;
+
+        while (!priorityQueue.isEmpty()) {
+            curr.next = priorityQueue.poll();
             curr = curr.next;
         }
         return dump.next;

@@ -7,13 +7,12 @@ import java.util.PriorityQueue;
 
 import static leetcode.ListNodeUtil.createListNode;
 import static leetcode.ListNodeUtil.equalsListNode;
-import static org.testng.Assert.*;
 
-public class MergekSortedListsTest {
+public class MergeKSortedListsTest {
 
     @Test
     public void testMergeKLists() {
-        ListNode listNode = new MergekSortedLists().mergeKLists(new ListNode[]{createListNode(1, 4, 5),
+        ListNode listNode = new MergeKSortedLists().mergeKLists(new ListNode[]{createListNode(1, 4, 5),
                 createListNode(1, 3, 4),
                 createListNode(2, 6)});
         equalsListNode(listNode, new int[]{1, 1, 2, 3, 4, 4, 5, 6});
@@ -27,5 +26,18 @@ public class MergekSortedListsTest {
         priorityQueue.add(3);
 
         System.out.println(priorityQueue);
+
+        while (!priorityQueue.isEmpty()) {
+            System.out.println(priorityQueue.poll());
+        }
+//
+//        PriorityQueue<Integer> q = new PriorityQueue<>();
+//        for (int i = 0; i < 10; i++) {
+//            q.add(i);
+//        }
+//
+//        while (!q.isEmpty()) {
+//            System.out.println(q.poll());
+//        }
     }
 }
