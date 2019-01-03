@@ -33,6 +33,7 @@ leetcode
 |237|[delete-node-in-a-linked-list](https://leetcode.com/problems/delete-node-in-a-linked-list/)| [java](./src/main/java/leetcode/DeleteNodeInALinkedList.java)|Easy|
 |234|[palindrome-linked-list](https://leetcode.com/problems/palindrome-linked-list/)| [java](./src/main/java/leetcode/PalindromeLinkedList.java)|Easy|
 |234|[jewels-and-stones](https://leetcode.com/problems/jewels-and-stones/)| [java](./src/main/java/leetcode/JewelsAndStones.java)|Easy|
+|264|[ugly-number-ii](https://leetcode.com/problems/ugly-number-ii/)| [java](./src/main/java/leetcode/UglyNumberII.java)|Medium|
 
 
 # 其他人的 leetcode
