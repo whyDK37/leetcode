@@ -8,7 +8,9 @@ public class UglyNumberIITest {
 
     @Test
     public void testNthUglyNumber() {
-        int i = new UglyNumberII().nthUglyNumber(12);
+        assertEquals(new UglyNumberII().nthUglyNumber(1), 1);
+        assertEquals(new UglyNumberII().nthUglyNumber(11), 15);
+        assertEquals(new UglyNumberII().nthUglyNumber(10), 12);
 
     }
 }
