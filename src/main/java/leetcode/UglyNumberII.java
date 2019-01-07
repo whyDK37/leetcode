@@ -5,43 +5,35 @@ public class UglyNumberII {
         if (index < 1) return 0;
         if (index == 1) return 1;
 
+        int[] uglyArr = new int[index];
+        uglyArr[0] = 1;
+        int uglyNextIndex = 1;
 
-        int[] uglyNumbers = new int[index];
-        uglyNumbers[0] = 1;
-        int nextUglyIndex = 1;
+        int ugly2 = 0;
+        int ugly3 = 0;
+        int ugly5 = 0;
 
-        int multiply2 = 0;
-        int multiply3 = 0;
-        int multiply5 = 0;
-        int min = 0;
+        while (uglyNextIndex < index) {
+            int min = min(uglyArr[ugly2] * 2, uglyArr[ugly3] * 3, uglyArr[ugly5] * 5);
+            uglyArr[uglyNextIndex] = min;
 
-        while (nextUglyIndex < index) {
-            min = Min(uglyNumbers[multiply2] * 2, uglyNumbers[multiply3] * 3, uglyNumbers[multiply5] * 5);
-            uglyNumbers[nextUglyIndex] = min;
-
-            while (uglyNumbers[multiply2] * 2 <= uglyNumbers[nextUglyIndex]) {
-                multiply2++;
+            while (uglyArr[ugly2] * 2 <= uglyArr[uglyNextIndex]) {
+                ugly2++;
             }
-
-            while (uglyNumbers[multiply3] * 3 <= uglyNumbers[nextUglyIndex]) {
-                multiply3++;
+            while (uglyArr[ugly3] * 3 <= uglyArr[uglyNextIndex]) {
+                ugly3++;
             }
-
-            while (uglyNumbers[multiply5] * 5 <= uglyNumbers[nextUglyIndex]) {
-                multiply5++;
+            while (uglyArr[ugly5] * 5 <= uglyArr[uglyNextIndex]) {
+                ugly5++;
             }
-
-            nextUglyIndex++;
+            uglyNextIndex++;
         }
 
+        return uglyArr[uglyNextIndex - 1];
 
-        return uglyNumbers[index - 1];
     }
 
-    private int Min(int num1, int num2, int num3) {
-        int min = num1 < num2 ? num1 : num2;
-        min = min < num3 ? min : num3;
-
-        return min;
+    private int min(int num1, int num2, int num3) {
+        return Math.min((num1 <= num2) ? num1 : num2, num3);
     }
 }
