@@ -1,8 +1,9 @@
 package leetcode;
 
 import org.testng.annotations.Test;
+import util.ListNodeUtil;
 
-import static leetcode.ListNodeUtil.equalsListNode;
+import static util.ListNodeUtil.equalsListNode;
 
 public class ReverseLinkedList2Test {
 

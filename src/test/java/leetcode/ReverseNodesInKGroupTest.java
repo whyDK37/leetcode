@@ -2,8 +2,8 @@ package leetcode;
 
 import org.testng.annotations.Test;
 
-import static leetcode.ListNodeUtil.createListNode;
-import static leetcode.ListNodeUtil.equalsListNode;
+import static util.ListNodeUtil.createListNode;
+import static util.ListNodeUtil.equalsListNode;
 import static leetcode.ReverseNodesInKGroup.reverseKGroup;
 
 public class ReverseNodesInKGroupTest {

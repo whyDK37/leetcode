@@ -1,5 +1,6 @@
-package leetcode;
+package util;
 
+import leetcode.ListNode;
 import org.testng.Assert;
 
 import java.util.ArrayList;

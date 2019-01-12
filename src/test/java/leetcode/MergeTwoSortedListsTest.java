@@ -1,8 +1,7 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
+import util.ListNodeUtil;
 
 public class MergeTwoSortedListsTest {
 

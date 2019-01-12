@@ -1,8 +1,9 @@
 package leetcode;
 
 import org.testng.annotations.Test;
+import util.ListNodeUtil;
 
-import static leetcode.ListNodeUtil.createListNode;
+import static util.ListNodeUtil.createListNode;
 
 public class AddTwoNumbersTest {
 

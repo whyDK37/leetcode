@@ -2,9 +2,8 @@ package leetcode;
 
 import org.testng.annotations.Test;
 
-import static leetcode.ListNodeUtil.createListNode;
-import static leetcode.ListNodeUtil.equalsListNode;
-import static org.testng.Assert.*;
+import static util.ListNodeUtil.createListNode;
+import static util.ListNodeUtil.equalsListNode;
 
 public class MergeKSortedLists2Test {
 
