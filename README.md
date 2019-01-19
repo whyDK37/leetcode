@@ -24,6 +24,7 @@ leetcode
 |23|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)| [java](./src/main/java/leetcode/MergeKSortedLists.java)|Hard|
 |25|[reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/)| [java](./src/main/java/leetcode/ReverseNodesInKGroup.java)|Hard|
 |31|[next-permutation](https://leetcode.com/problems/next-permutation/)| [java](./src/main/java/leetcode/NextPermutation.java)|Medium|
+|32|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)| [java](./src/main/java/leetcode/LongestValidParentheses.java)|Medium|
 |58|[length-of-last-word](https://leetcode.com/problems/length-of-last-word/)| [java](./src/main/java/leetcode/LengthOfLastWord.java)|Easy|
 |92|[reverse-linked-list-ii](https://leetcode.com/problems/reverse-linked-list-ii/)| [java](./src/main/java/leetcode/ReverseLinkedList2.java)|Medium|
 |141|[linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)| [java](./src/main/java/leetcode/LinkedListCycle.java)|Easy|
