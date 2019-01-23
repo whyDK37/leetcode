@@ -4,15 +4,15 @@ package leetcode;
 public class SearchInRotatedSortedArray {
 
     public int search(int[] nums, int target) {
-        if(nums.length == 0) return -1;
+        if (nums.length == 0) return -1;
 
         // find smallest index
         int smallestIdx = findSmallestIndex(nums);
         int start = 0, end = nums.length - 1;
-        if (nums[smallestIdx] <= target && target <= nums[end]) {
-            start = smallestIdx;
-        } else {
+        if (nums[0] <= target) {
             end = smallestIdx;
+        } else {
+            start = smallestIdx;
         }
 
         // using binary search

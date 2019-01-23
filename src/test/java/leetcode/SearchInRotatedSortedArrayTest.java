@@ -19,13 +19,12 @@ public class SearchInRotatedSortedArrayTest {
         assertEquals(search.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 1), 5);
         assertEquals(search.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 3), -1);
         assertEquals(search.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0), 4);
-//        assertEquals(search.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 3), -1);
 
 
     }
 
     @Test
-    public void test() {
+    public void findSmallestIndex() {
         SearchInRotatedSortedArray search = new SearchInRotatedSortedArray();
         assertEquals(search.findSmallestIndex(new int[]{1, 2, 3, 4, 5}), 0);
         assertEquals(search.findSmallestIndex(new int[]{1, 2, 3, 4, 5, 0}), 5);
