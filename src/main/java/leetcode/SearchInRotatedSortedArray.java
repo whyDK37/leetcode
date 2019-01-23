@@ -1,6 +1,12 @@
 package leetcode;
 
 
+/**
+ * 1, find smallest index, using binary search is perfect. Smallest index separate nums into two part, so the first half is always bigger the second half.
+ * 2, compare nums first item and target,
+ *    if target is bigger , search first half.
+ *    else search second half.
+ */
 public class SearchInRotatedSortedArray {
 
     public int search(int[] nums, int target) {
