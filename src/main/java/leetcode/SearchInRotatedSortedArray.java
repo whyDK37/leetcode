@@ -6,6 +6,7 @@ package leetcode;
  * 2, compare nums first item and target,
  *    if target is bigger , search first half.
  *    else search second half.
+ * 3, Again, using binary search to find target.
  */
 public class SearchInRotatedSortedArray {
 
