@@ -26,6 +26,7 @@ leetcode
 |31|[next-permutation](https://leetcode.com/problems/next-permutation/)| [java](./src/main/java/leetcode/NextPermutation.java)|Medium|
 |32|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)| [java](./src/main/java/leetcode/LongestValidParentheses.java)|Medium|
 |33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| [java](./src/main/java/leetcode/SearchInRotatedSortedArray.java)|Medium|
+|34|[Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [Go](golang/main/FindFirstAndLastPositionOfElementInSortedArray.go)|Medium|
 |58|[length-of-last-word](https://leetcode.com/problems/length-of-last-word/)| [java](./src/main/java/leetcode/LengthOfLastWord.java)|Easy|
 |92|[reverse-linked-list-ii](https://leetcode.com/problems/reverse-linked-list-ii/)| [java](./src/main/java/leetcode/ReverseLinkedList2.java)|Medium|
 |141|[linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)| [java](./src/main/java/leetcode/LinkedListCycle.java)|Easy|
