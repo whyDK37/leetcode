@@ -27,6 +27,9 @@ leetcode
 |32|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)| [java](./src/main/java/leetcode/LongestValidParentheses.java)|Medium|
 |33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| [java](./src/main/java/leetcode/SearchInRotatedSortedArray.java)|Medium|
 |34|[Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [Go](golang/main/FindFirstAndLastPositionOfElementInSortedArray.go)|Medium|
+|39?|[Combination Sum](https://leetcode.com/problems/combination-sum/)| [java](./src/main/java/leetcode/CombinationSum.java)|Medium|
+|42?|[trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/)| [java](./src/main/java/leetcode/TrappingRainWater.java)|Hard|
+|46?|[permutations](https://leetcode.com/problems/permutations/)| [java](./src/main/java/leetcode/Permutations.java)|Medium|
 |58|[length-of-last-word](https://leetcode.com/problems/length-of-last-word/)| [java](./src/main/java/leetcode/LengthOfLastWord.java)|Easy|
 |92|[reverse-linked-list-ii](https://leetcode.com/problems/reverse-linked-list-ii/)| [java](./src/main/java/leetcode/ReverseLinkedList2.java)|Medium|
 |141|[linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)| [java](./src/main/java/leetcode/LinkedListCycle.java)|Easy|
@@ -41,7 +44,7 @@ leetcode
 
 
 # 其他人的 leetcode
-- [陈浩的 leetcode](https://github.com/haoel/leetcode)
-- [朝光的 leetcode](https://leetcode.com/huangchgu/) [github](https://github.com/hcghaha/algorithms-learning)
-- [云强的 leetcode](https://leetcode.com/supermaster007/)
-- [我的   leetcode](https://leetcode.com/whydk37/)
+- 陈浩的 [github](https://github.com/haoel/leetcode)
+- 朝光的 [leetcode](https://leetcode.com/huangchgu/) [github](https://github.com/hcghaha/algorithms-learning)
+- 云强的 [leetcode](https://leetcode.com/supermaster007/)
+- 我的 [leetcode](https://leetcode.com/whydk37/)
