@@ -32,6 +32,7 @@ leetcode
 |46?|[permutations](https://leetcode.com/problems/permutations/)| [java](./src/main/java/leetcode/Permutations.java)|Medium|
 |48|[rotate-image](https://leetcode.com/problems/rotate-image/)|  [Go](golang/main/RotateImage.go)|Medium|
 |49|[group-anagrams](https://leetcode.com/problems/group-anagrams/)|  [java](./src/main/java/leetcode/GroupAnagrams.java)|Medium|
+|53|[maximum-subarray](https://leetcode.com/problems/maximum-subarray/)|  [java](./src/main/java/leetcode/MaximumSubarray.java)|Easy|
 |58|[length-of-last-word](https://leetcode.com/problems/length-of-last-word/)| [java](./src/main/java/leetcode/LengthOfLastWord.java)|Easy|
 |92|[reverse-linked-list-ii](https://leetcode.com/problems/reverse-linked-list-ii/)| [java](./src/main/java/leetcode/ReverseLinkedList2.java)|Medium|
 |141|[linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)| [java](./src/main/java/leetcode/LinkedListCycle.java)|Easy|
