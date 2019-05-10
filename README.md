@@ -5,6 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)| [java](./src/main/java/leetcode/MinimumPathSum.java)|Medium|
 |62|[unique-paths](https://leetcode.com/problems/unique-paths/)| [java](./src/main/java/leetcode/UniquePaths.java)|Medium|
 |56|[merge-intervals](https://leetcode.com/problems/merge-intervals/)| [java](./src/main/java/leetcode/MergeIntervals.java)|Medium|
 |1|[two-sum](https://leetcode.com/articles/two-sum/)| [java](./src/main/java/leetcode/TwoSum.java)|Easy|
