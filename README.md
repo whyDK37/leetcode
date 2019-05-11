@@ -5,6 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|70|[㊙‍climbing-stairs](https://leetcode.com/problems/climbing-stairs/)| [java](./src/main/java/leetcode/ClimbingStairs.java)|Easy|
 |64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)| [java](./src/main/java/leetcode/MinimumPathSum.java)|Medium|
 |62|[unique-paths](https://leetcode.com/problems/unique-paths/)| [java](./src/main/java/leetcode/UniquePaths.java)|Medium|
 |56|[merge-intervals](https://leetcode.com/problems/merge-intervals/)| [java](./src/main/java/leetcode/MergeIntervals.java)|Medium|
