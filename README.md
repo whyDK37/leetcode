@@ -5,6 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|72|[edit-distance](https://leetcode.com/problems/edit-distance/)| [java](./src/main/java/leetcode/EditDistance.java)|Hard|
 |70|[㊙‍climbing-stairs](https://leetcode.com/problems/climbing-stairs/)| [java](./src/main/java/leetcode/ClimbingStairs.java)|Easy|
 |64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)| [java](./src/main/java/leetcode/MinimumPathSum.java)|Medium|
 |62|[unique-paths](https://leetcode.com/problems/unique-paths/)| [java](./src/main/java/leetcode/UniquePaths.java)|Medium|
@@ -55,4 +56,3 @@ leetcode
 - 陈浩的 [github](https://github.com/haoel/leetcode)
 - 朝光的 [leetcode](https://leetcode.com/huangchgu/) [github](https://github.com/hcghaha/algorithms-learning)
 - 云强的 [leetcode](https://leetcode.com/supermaster007/)
-- 我的 [leetcode](https://leetcode.com/whydk37/)
