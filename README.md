@@ -5,7 +5,8 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|72|[edit-distance](https://leetcode.com/problems/edit-distance/)| [java](./src/main/java/leetcode/EditDistance.java)|Hard|
+|75|[sort-colors](https://leetcode.com/problems/sort-colors/) | [java](./src/main/java/leetcode/SortColors.java)|Medium|
+|72|[edit-distance](https://leetcode.com/problems/edit-distance/) [解释](https://blog.csdn.net/chen134225/article/details/81775575)| [java](./src/main/java/leetcode/EditDistance.java)|Hard|
 |70|[㊙‍climbing-stairs](https://leetcode.com/problems/climbing-stairs/)| [java](./src/main/java/leetcode/ClimbingStairs.java)|Easy|
 |64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)| [java](./src/main/java/leetcode/MinimumPathSum.java)|Medium|
 |62|[unique-paths](https://leetcode.com/problems/unique-paths/)| [java](./src/main/java/leetcode/UniquePaths.java)|Medium|
@@ -53,6 +54,6 @@ leetcode
 
 
 # 其他人的 leetcode
-- 陈浩的 [github](https://github.com/haoel/leetcode)
-- 朝光的 [leetcode](https://leetcode.com/huangchgu/) [github](https://github.com/hcghaha/algorithms-learning)
+- 陈浩的 [github](https://github.com/haoel/leetcode) [leetcode](https://leetcode.com/haoel/)
+- 朝光的 [github](https://github.com/hcghaha/algorithms-learning)  [leetcode](https://leetcode.com/huangchgu/) 
 - 云强的 [leetcode](https://leetcode.com/supermaster007/)
