@@ -15,4 +15,10 @@ public class SortColorsTest {
         sortColors.sortColors(nums);
         TestUtil.equals(nums, new int[]{0, 0, 1, 1, 2, 2});
     }
+
+    @Test
+    public void testSort() {
+        SortColors sortColors = new SortColors();
+        sortColors.sortColors(new int[]{6, 8});
+    }
 }
