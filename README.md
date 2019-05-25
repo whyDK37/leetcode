@@ -5,7 +5,8 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|76|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [java](./src/main/java/leetcode/MinimumWindowSubstring.java)|Medium|
+|78|[subsets](https://leetcode.com/problems/subsets/) | [java](./src/main/java/leetcode/Subsets.java)|Medium|
+|76|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [java](./src/main/java/leetcode/MinimumWindowSubstring.java)|Hard|
 |75|[sort-colors](https://leetcode.com/problems/sort-colors/) | [java](./src/main/java/leetcode/SortColors.java)|Medium|
 |72|[edit-distance](https://leetcode.com/problems/edit-distance/) [解释](https://blog.csdn.net/chen134225/article/details/81775575)| [java](./src/main/java/leetcode/EditDistance.java)|Hard|
 |70|[㊙‍climbing-stairs](https://leetcode.com/problems/climbing-stairs/)| [java](./src/main/java/leetcode/ClimbingStairs.java)|Easy|
