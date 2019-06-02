@@ -5,6 +5,8 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|90|[subsets-ii](https://leetcode.com/problems/subsets-ii/) | [java](./src/main/java/leetcode/SubsetsII.java)|Medium|
+|79|[word-search](https://leetcode.com/problems/word-search/) | [java](./src/main/java/leetcode/WordSearch.java)|Medium|
 |78|[subsets](https://leetcode.com/problems/subsets/) | [java](./src/main/java/leetcode/Subsets.java)|Medium|
 |76|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [java](./src/main/java/leetcode/MinimumWindowSubstring.java)|Hard|
 |75|[sort-colors](https://leetcode.com/problems/sort-colors/) | [java](./src/main/java/leetcode/SortColors.java)|Medium|

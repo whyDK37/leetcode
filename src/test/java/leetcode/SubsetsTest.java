@@ -13,8 +13,8 @@ public class SubsetsTest {
 
         Subsets subsets = new Subsets();
 
-        List<List<Integer>> subsets1 = subsets.subsets(new int[]{1, 2, 3});
-        System.out.println(subsets1);
+        System.out.println(subsets.subsets(new int[]{1, 2, 3}));
+        System.out.println(subsets.subsets(new int[]{1, 2, 2}));
     }
 
 }
