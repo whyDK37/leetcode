@@ -5,6 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|90|[maximum-depth-of-binary-tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [java](./src/main/java/leetcode/MaximumDepthOfBinaryTree.java)|Medium|
 |90|[subsets-ii](https://leetcode.com/problems/subsets-ii/) | [java](./src/main/java/leetcode/SubsetsII.java)|Medium|
 |79|[word-search](https://leetcode.com/problems/word-search/) | [java](./src/main/java/leetcode/WordSearch.java)|Medium|
 |78|[subsets](https://leetcode.com/problems/subsets/) | [java](./src/main/java/leetcode/Subsets.java)|Medium|
