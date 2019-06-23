@@ -5,7 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|121|[symmetric-tree](https://leetcode.com/problems/symmetric-tree/) | [java](./src/main/java/leetcode/BestTimeToBuyAndSellStock.java)|Easy|
+|121|[symmetric-tree](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [java](./src/main/java/leetcode/BestTimeToBuyAndSellStock.java)|Easy|
 |101|[symmetric-tree](https://leetcode.com/problems/symmetric-tree/) | [java](./src/main/java/leetcode/SymmetricTree.java)|Easy|
 |104|[maximum-depth-of-binary-tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [java](./src/main/java/leetcode/MaximumDepthOfBinaryTree.java)|Easy|
 |90|[subsets-ii](https://leetcode.com/problems/subsets-ii/) | [java](./src/main/java/leetcode/SubsetsII.java)|Medium|
