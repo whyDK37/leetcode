@@ -5,6 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|169|[MinStack](https://leetcode.com/problems/majority-element/) | [java](./src/main/java/leetcode/MajorityElement.java)|Easy|
 |155|[MinStack](https://leetcode.com/problems/min-stack/) | [java](./src/main/java/leetcode/MinStack.java)|Easy|
 |136|[single-number](https://leetcode.com/problems/single-number/) | [java](./src/main/java/leetcode/SingleNumber.java)|Easy|
 |121|[best-time-to-buy-and-sell-stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [java](./src/main/java/leetcode/BestTimeToBuyAndSellStock.java)|Easy|
