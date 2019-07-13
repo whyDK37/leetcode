@@ -5,7 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|229|[MinStack](https://leetcode.com/problems/majority-element-ii/) | [java](./src/main/java/leetcode/MajorityElementII.java)|Easy|
+|229|[majority-element ii](https://leetcode.com/problems/majority-element-ii/) | [java](./src/main/java/leetcode/MajorityElementII.java)|Easy|
 |169|[majority-element](https://leetcode.com/problems/majority-element/) | [java](./src/main/java/leetcode/MajorityElement.java)|Easy|
 |155|[MinStack](https://leetcode.com/problems/min-stack/) | [java](./src/main/java/leetcode/MinStack.java)|Easy|
 |136|[single-number](https://leetcode.com/problems/single-number/) | [java](./src/main/java/leetcode/SingleNumber.java)|Easy|
