@@ -9,11 +9,14 @@ public class SwapNodesInPairs {
         ListNode cur = sen;
         while (cur.next != null && cur.next.next != null) {
             ListNode next = cur.next;
-            ListNode next1 = cur.next.next;
+            ListNode next1 = next.next;
+            ListNode next2 = next1.next;
 
+            cur.next = next1;
+            next1.next = next;
+            next.next = next2;
             cur = cur.next.next;
         }
-
 
         return sen.next;
     }
