@@ -1,7 +1,7 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-import util.ListNodeUtil;
+import leetcode.util.ListNodeUtil;
 
 public class RemoveLinkedListElementsTest {
 

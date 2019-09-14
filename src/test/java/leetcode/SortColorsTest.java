@@ -1,9 +1,7 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-import util.TestUtil;
-
-import static org.testng.Assert.*;
+import leetcode.util.TestUtil;
 
 public class SortColorsTest {
 

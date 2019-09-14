@@ -1,9 +1,9 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-import util.ListNodeUtil;
+import leetcode.util.ListNodeUtil;
 
-import static util.ListNodeUtil.createListNode;
+import static leetcode.util.ListNodeUtil.createListNode;
 
 public class RemoveNthNodeFromEndofListTest {
 

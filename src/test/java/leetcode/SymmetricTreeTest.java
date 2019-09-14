@@ -1,6 +1,6 @@
 package leetcode;
 
-import util.TestUtil;
+import leetcode.util.TestUtil;
 
 import static org.testng.Assert.*;
 

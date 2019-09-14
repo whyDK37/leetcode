@@ -1,11 +1,9 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-import util.TestUtil;
+import leetcode.util.TestUtil;
 
 import java.util.Arrays;
-
-import static org.testng.Assert.*;
 
 public class NextPermutationTest {
 

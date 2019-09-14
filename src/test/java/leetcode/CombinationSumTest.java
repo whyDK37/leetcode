@@ -1,11 +1,6 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-import util.TestUtil;
-
-import java.util.List;
-
-import static org.testng.Assert.*;
 
 public class CombinationSumTest {
 

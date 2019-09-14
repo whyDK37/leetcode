@@ -1,7 +1,6 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-import util.TestUtil;
 
 import static org.testng.Assert.*;
 

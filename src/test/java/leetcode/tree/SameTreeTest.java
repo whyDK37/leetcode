@@ -1,7 +1,7 @@
 package leetcode.tree;
 
 import org.testng.Assert;
-import util.TestUtil;
+import leetcode.util.TestUtil;
 
 
 public class SameTreeTest {

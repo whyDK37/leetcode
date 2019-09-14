@@ -1,11 +1,9 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-import util.ListNodeUtil;
 
-import static org.testng.Assert.*;
-import static util.ListNodeUtil.createListNode;
-import static util.ListNodeUtil.equalsListNode;
+import static leetcode.util.ListNodeUtil.createListNode;
+import static leetcode.util.ListNodeUtil.equalsListNode;
 
 public class SwapNodesInPairsTest {
 

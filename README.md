@@ -5,6 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|100|[same-tree](https://leetcode.com/problems/same-tree/) | [java](./src/main/java/leetcode/tree/SameTree.java)|Easy|
 |24|[swap-nodes-in-pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [java](./src/main/java/leetcode/SwapNodesInPairs.java)|Medium|
 |229|[majority-element ii](https://leetcode.com/problems/majority-element-ii/) | [java](./src/main/java/leetcode/MajorityElementII.java)|Medium|
 |169|[majority-element](https://leetcode.com/problems/majority-element/) | [java](./src/main/java/leetcode/MajorityElement.java)|Easy|

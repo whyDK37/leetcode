@@ -4,9 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 import org.testng.annotations.Test;
-import util.ListNodeUtil;
+import leetcode.util.ListNodeUtil;
 
-import static util.ListNodeUtil.createListNode;
+import static leetcode.util.ListNodeUtil.createListNode;
 
 public class AddTwoNumbersTest {
 

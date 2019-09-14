@@ -1,4 +1,4 @@
-package util;
+package leetcode.util;
 
 import leetcode.pojo.TreeNode;
 import org.testng.Assert;

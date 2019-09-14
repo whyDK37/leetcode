@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-import static util.ListNodeUtil.createListNode;
-import static util.ListNodeUtil.equalsListNode;
+import static leetcode.util.ListNodeUtil.createListNode;
+import static leetcode.util.ListNodeUtil.equalsListNode;
 
 public class MergeKSortedListsTest {
 

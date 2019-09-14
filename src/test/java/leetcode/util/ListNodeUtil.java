@@ -1,4 +1,4 @@
-package util;
+package leetcode.util;
 
 import leetcode.ListNode;
 import org.testng.Assert;
