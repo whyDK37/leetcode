@@ -28,7 +28,6 @@ public class TestUtil {
         List<TreeNode> nextRoots = new ArrayList<>();
         List<TreeNode> nextRootTmp = new ArrayList<>();
         nextRootTmp.add(root);
-        new ArrayList<>();
         while (!nextRootTmp.isEmpty() && it.hasNext()) {
             nextRoots.clear();
             nextRoots.addAll(nextRootTmp);

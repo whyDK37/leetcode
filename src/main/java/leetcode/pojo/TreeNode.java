@@ -9,6 +9,13 @@ public class TreeNode {
         val = x;
     }
 
+
+    public TreeNode(int x, TreeNode left, TreeNode right) {
+        val = x;
+        this.left = left;
+        this.right = right;
+    }
+
     @Override
     public String toString() {
         return "TreeNode{" +
