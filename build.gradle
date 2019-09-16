@@ -6,8 +6,8 @@ version = '0.0.1-SNAPSHOT'
 
 description = "leetcode"
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }

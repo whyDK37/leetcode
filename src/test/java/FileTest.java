@@ -19,7 +19,7 @@ public class FileTest {
             fileOutputStream.close();
             System.out.println(i + "-" + file.delete());
             sc.position(0);
-            TimeUnit.MILLISECONDS.sleep(200L);
+//            TimeUnit.MILLISECONDS.sleep(200L);
         }
     }
 }
