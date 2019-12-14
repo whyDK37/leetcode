@@ -5,6 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|1114|[print-in-order](https://leetcode.com/problems/print-in-order/) | [java](./src/main/java/leetcode/PrintInOrder.java)|Easy|
 |96 |[unique-binary-search-trees](https://leetcode.com/problems/unique-binary-search-trees/) | [java](./src/main/java/leetcode/tree/UniqueBinarySearchTrees.java)|Medium|
 |94 |[binary-tree-inorder-traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | [java](./src/main/java/leetcode/tree/BinaryTreeLevelOrderTraversal.java)|Medium|
 |102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [java](./src/main/java/leetcode/tree/BinaryTreeLevelOrderTraversal.java)|Medium|
