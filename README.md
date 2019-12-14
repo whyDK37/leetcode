@@ -5,6 +5,7 @@ leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|1116|[print-zero-even-odd](https://leetcode.com/problems/print-zero-even-odd/) | [java](./src/main/java/leetcode/PrintZeroEvenOdd.java)|Medium|
 |1115|[print-foobar-alternately](https://leetcode.com/problems/print-foobar-alternately/) | [java](./src/main/java/leetcode/PrintFoobarAlternately.java)|Medium|
 |1114|[print-in-order](https://leetcode.com/problems/print-in-order/) | [java](./src/main/java/leetcode/PrintInOrder.java)|Easy|
 |96 |[unique-binary-search-trees](https://leetcode.com/problems/unique-binary-search-trees/) | [java](./src/main/java/leetcode/tree/UniqueBinarySearchTrees.java)|Medium|
