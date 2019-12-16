@@ -10,7 +10,7 @@ package alg.recursion;
  * 递归和回溯结合使用，回溯会使用递归调用栈保存回溯点，当递归调用完成返回，
  * 会触发回溯点的条件继续处理其他情况。
  */
-public class MiGong2 {
+public class Maze2 {
     /**
      * 1 墙
      * 2 通路
