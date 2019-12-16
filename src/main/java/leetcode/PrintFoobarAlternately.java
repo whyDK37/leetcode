@@ -1,10 +1,6 @@
 package leetcode;
 
-import org.testng.Assert;
-
 import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class PrintFoobarAlternately {
 
@@ -22,7 +18,7 @@ public class PrintFoobarAlternately {
                 sb.append("foobar");
             }
 
-            Assert.assertEquals(rs, sb.toString());
+            System.out.println("rs.equals(sb.toString()) = " + rs.equals(sb.toString()));
         }
     }
 
