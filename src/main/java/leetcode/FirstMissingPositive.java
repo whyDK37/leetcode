@@ -1,24 +1,21 @@
 package leetcode;
 
-import java.util.Arrays;
-
 public class FirstMissingPositive {
     public int firstMissingPositive(int[] nums) {
         if (nums.length == 0) return 1;
+        if (nums.length == 1 && nums[0] <= 0) return 1;
 
-        Arrays.sort(nums);
-        int missing = 1;
-        for (int num : nums) {
-            if (num > 0) {
-                if (num != missing) {
-                    if (num != (missing - 1)) {
-                        break;
-                    }
-                } else {
-                    missing++;
-                }
-            }
+        int n = nums.length;
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            if (nums[i] > 0 && nums[i] <= n)
+                arr[nums[i] - 1] = 1;
         }
-        return missing;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != 1)
+                return i + 1;
+        }
+        return n + 1;
     }
 }
