@@ -10,6 +10,6 @@ public class SingleNumberTest {
   public void testSingleNumber() {
     SingleNumber singleNumber = new SingleNumber();
     assertEquals(singleNumber.singleNumber(new int[]{2, 2, 1}), 1);
-//    assertEquals(singleNumber.singleNumber(new int[]{4, 1, 2, 1, 2}), 4);
+    assertEquals(singleNumber.singleNumber(new int[]{4, 1, 2, 1, 2}), 4);
   }
 }

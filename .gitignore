@@ -4,6 +4,7 @@
 .idea/
 leetcode.iml
 out/
+target/
 *.iml
 *.ipr
 *.iws
