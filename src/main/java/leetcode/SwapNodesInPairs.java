@@ -4,20 +4,19 @@ package leetcode;
 public class SwapNodesInPairs {
 
     public ListNode swapPairs(ListNode head) {
-        ListNode sen = new ListNode(0);
-        sen.next = head;
-        ListNode cur = sen;
-        while (cur.next != null && cur.next.next != null) {
-            ListNode next = cur.next;
-            ListNode next1 = next.next;
-            ListNode next2 = next1.next;
+        ListNode sentinel = new ListNode(0);
+        sentinel.next = head;
 
-            cur.next = next1;
-            next1.next = next;
-            next.next = next2;
-            cur = cur.next.next;
+        ListNode pre = sentinel;
+        while (pre.next != null && pre.next.next != null) {
+            ListNode a = pre.next, b = a.next;
+
+            pre.next = b;
+            a.next = b.next;
+            b.next = a;
+            pre = a;
         }
 
-        return sen.next;
+        return sentinel.next;
     }
 }
