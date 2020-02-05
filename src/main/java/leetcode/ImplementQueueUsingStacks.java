@@ -5,8 +5,8 @@ import java.util.Stack;
 public class ImplementQueueUsingStacks {
     static class MyQueue {
 
-        Stack<Integer> push = new Stack<>();
-        Stack<Integer> pop = new Stack<>();
+        Stack<Integer> in = new Stack<>();
+        Stack<Integer> out = new Stack<>();
 
         /**
          * Initialize your data structure here.
@@ -19,58 +19,49 @@ public class ImplementQueueUsingStacks {
          * Push element x to the back of queue.
          */
         public void push(int x) {
-            push.push(x);
+            in.push(x);
         }
 
         /**
          * Removes the element from in front of queue and returns that element.
          */
         public int pop() {
-            if (push.size() == 0) return -1;
+            if (out.size() != 0) return out.pop();
 
-            while (push.size() > 1) {
-                pop.push(push.pop());
+
+            while (in.size() > 0) {
+                out.push(in.pop());
             }
 
-            Integer peek = push.pop();
-            while (pop.size() > 0) {
-                push.push(pop.pop());
-            }
-
-            return peek;
+            return out.pop();
         }
 
         /**
          * Get the front element.
          */
         public int peek() {
-            if (push.size() == 0) return -1;
+            if (out.size() != 0) return out.peek();
 
-            while (push.size() > 1) {
-                pop.push(push.pop());
+            while (in.size() > 0) {
+                out.push(in.pop());
             }
 
-            Integer peek = push.peek();
-            while (pop.size() > 0) {
-                push.push(pop.pop());
-            }
-
-            return peek;
+            return out.peek();
         }
 
         /**
          * Returns whether the queue is empty.
          */
         public boolean empty() {
-            return push.isEmpty();
+            return in.isEmpty() && out.isEmpty();
         }
     }
 
     public static void main(String[] args) {
         MyQueue obj = new MyQueue();
         obj.push(1);
-        System.out.println("obj.pop() = " + obj.pop());
         System.out.println("obj.peek() = " + obj.peek());
+        System.out.println("obj.pop() = " + obj.pop());
         System.out.println("obj.empty() = " + obj.empty());
     }
 }
