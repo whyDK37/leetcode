@@ -2,10 +2,7 @@ package leetcode.tree;
 
 import leetcode.pojo.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -15,23 +12,20 @@ public class BinaryTreeLevelOrderTraversal {
         if (root == null) return Collections.EMPTY_LIST;
 
         List<List<Integer>> result = new LinkedList<>();
-
-        List<TreeNode> level1 = new ArrayList<>();
-        List<TreeNode> level2 = new ArrayList<>();
-        level1.add(root);
-        while (!level1.isEmpty()) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
             ArrayList<Integer> cl = new ArrayList<>();
             result.add(cl);
-            level2.clear();
-            for (TreeNode treeNode : level1) {
-                if (treeNode.left != null) level2.add(treeNode.left);
-                if (treeNode.right != null) level2.add(treeNode.right);
 
+            int levelCount = queue.size();
+            // 处理一层的数据
+            for (int i = 0; i < levelCount; i++) {
+                TreeNode treeNode = queue.poll();
                 cl.add(treeNode.val);
+                if (treeNode.left != null) queue.add(treeNode.left);
+                if (treeNode.right != null) queue.add(treeNode.right);
             }
-
-            level1.clear();
-            level1.addAll(level2);
         }
 
 
