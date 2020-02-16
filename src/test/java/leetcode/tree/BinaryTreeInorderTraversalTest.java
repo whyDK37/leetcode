@@ -1,19 +1,18 @@
 package leetcode.tree;
 
+import java.util.List;
 import leetcode.pojo.TreeNode;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 public class BinaryTreeInorderTraversalTest {
 
-    @Test
-    public void testInorderTraversal() {
-        BinaryTreeInorderTraversal binaryTreeInorderTraversal = new BinaryTreeInorderTraversal();
+  @Test
+  public void testInorderTraversal() {
+    BinaryTreeInorderTraversal binaryTreeInorderTraversal = new BinaryTreeInorderTraversal();
 
-        List<Integer> integers = binaryTreeInorderTraversal.inorderTraversal(new TreeNode(1
-                , null, new TreeNode(2
-                , new TreeNode(3), null)));
-        System.out.println(integers);
-    }
+    List<Integer> integers = binaryTreeInorderTraversal.inorderTraversal(new TreeNode(1
+        , null, new TreeNode(2
+        , new TreeNode(3), null)));
+    System.out.println(integers);
+  }
 }

@@ -1,16 +1,16 @@
 package leetcode;
 
-import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
-import static org.testng.Assert.*;
+import org.testng.annotations.Test;
 
 public class MinimumWindowSubstringTest {
 
-    @Test
-    public void testMinWindow() {
-        MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
+  @Test
+  public void testMinWindow() {
+    MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
 
-        assertEquals(minimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC"), "BANC");
+    assertEquals(minimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC"), "BANC");
 
-    }
+  }
 }
