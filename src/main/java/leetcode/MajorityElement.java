@@ -6,7 +6,9 @@ import java.util.Arrays;
 public class MajorityElement {
 
   public int majorityElement(int[] nums) {
-    if (nums.length == 1) return nums[0];
+    if (nums.length == 1) {
+      return nums[0];
+    }
 
     Arrays.sort(nums);
     int mid = nums.length / 2;
