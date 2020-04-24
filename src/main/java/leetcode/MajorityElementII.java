@@ -9,7 +9,9 @@ import java.util.List;
 public class MajorityElementII {
 
   public List<Integer> majorityElement(int[] nums) {
-    if (nums == null || nums.length == 0) return Collections.emptyList();
+    if (nums == null || nums.length == 0) {
+      return Collections.emptyList();
+    }
     if (nums.length == 1) {
       List<Integer> integers = new ArrayList<>(1);
       integers.add(nums[0]);

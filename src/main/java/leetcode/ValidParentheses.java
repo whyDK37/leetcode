@@ -1,34 +1,33 @@
 package leetcode;
 
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
 public class ValidParentheses {
-    public boolean isValid(String s) {
-        char[] parentheses = new char[s.length()];
-        int pi = 0;
 
-        for (char aChar : s.toCharArray()) {
-            if (aChar == '(' || aChar == '[' || aChar == '{') {
-                parentheses[pi++] = aChar;
-            } else {
-                if (pi == 0) return false;
-                char parenthesis = parentheses[pi - 1];
-                switch (parenthesis) {
-                    case '(':
-                        if (aChar != ')') return false;
-                        break;
-                    case '[':
-                        if (aChar != ']') return false;
-                        break;
-                    case '{':
-                        if (aChar != '}') return false;
-                        break;
-                    default:
-                        return false;
-                }
-                pi--;
-            }
+  private static Map<Character, Character> characterMap = new HashMap<>(5);
 
-        }
-        return pi == 0;
+  static {
+    characterMap.put(')', '(');
+    characterMap.put(']', '[');
+    characterMap.put('}', '{');
+  }
+
+  public boolean isValid(String s) {
+    Stack<Character> stack = new Stack<>();
+
+    for (char aChar : s.toCharArray()) {
+      // 压栈
+      if (!characterMap.containsKey(aChar)) {
+        stack.push(aChar);
+      } else if (stack.isEmpty() || stack.pop() != characterMap.get(aChar)) {
+        return false;
+      }
+
     }
+
+    return stack.isEmpty();
+  }
 }
