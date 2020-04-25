@@ -14,5 +14,7 @@ public class ClimbingStairsTest {
     assertEquals(climbingStairs.climbStairs(4), 5);
     assertEquals(climbingStairs.climbStairs(3), 3);
     assertEquals(climbingStairs.climbStairs(2), 2);
+    assertEquals(climbingStairs.climbStairs(1), 1);
+    assertEquals(climbingStairs.climbStairs(0), 0);
   }
 }
