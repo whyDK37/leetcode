@@ -8,6 +8,8 @@ public class FibonacciNumberTest {
   @Test
   public void testFib() {
     FibonacciNumber fib = new FibonacciNumber();
+    Assert.assertEquals(fib.fib(0), 0);
+    Assert.assertEquals(fib.fib(1), 1);
     Assert.assertEquals(fib.fib(2), 1);
     Assert.assertEquals(fib.fib(3), 2);
     Assert.assertEquals(fib.fib(4), 3);
