@@ -19,15 +19,17 @@ public class ValidAnagram {
       return false;
     }
 
+    // 第一遍累加
     int[] arr = new int[26];
     for (char c : s.toCharArray()) {
       arr[c - 'a']++;
     }
+    // 第二遍
     for (char c : t.toCharArray()) {
-      if (arr[c - 'a'] == 0) {
+      arr[c - 'a']--;
+      if (arr[c - 'a'] < 0) {
         return false;
       }
-      arr[c - 'a']--;
     }
 
     return true;
