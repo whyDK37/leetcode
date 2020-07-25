@@ -6,7 +6,7 @@ import java.util.List;
 import leetcode.pojo.TreeNode;
 
 /**
- * https://leetcode.com/problems/binary-tree-postorder-traversal/
+ * https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/description/
  */
 public class BinaryTreePostorderTraversal {
 
@@ -20,13 +20,16 @@ public class BinaryTreePostorderTraversal {
 
     stack.add(root);
     while (!stack.isEmpty()) {
-      TreeNode node = stack.removeLast();
-      output.addFirst(node.val);
-      if (node.left != null) {
-        stack.add(node.left);
+      TreeNode last = stack.pollLast();
+      // todo 感觉像是头插法，不知道有什么特性
+      output.addFirst(last.val);
+
+      // 和递归的顺序相反
+      if (last.left != null) {
+        stack.push(last.left);
       }
-      if (node.right != null) {
-        stack.add(node.right);
+      if (last.right != null) {
+        stack.push(last.right);
       }
     }
     return output;
