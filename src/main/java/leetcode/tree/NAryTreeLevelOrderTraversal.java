@@ -20,21 +20,18 @@ public class NAryTreeLevelOrderTraversal {
 
     List<List<Integer>> result = new ArrayList<>();
     LinkedList<Node> stack = new LinkedList<>();
-    int n = 1;
     stack.add(root);
+
     while (!stack.isEmpty()) {
       List<Integer> level = new ArrayList<>();
-      for (int i = 0; i < n; i++) {
+      int length = stack.size();
+      for (int i = 0; i < length; i++) {
         Node node = stack.pollFirst();
-        if (node == null) {
-          continue;
-        }
         level.add(node.val);
         if (node.children != null && !node.children.isEmpty()) {
           stack.addAll(node.children);
         }
       }
-      n = stack.size();
       result.add(level);
     }
 
