@@ -6,6 +6,8 @@ import java.util.List;
 import leetcode.pojo.TreeNode;
 
 /**
+ * https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
+ * <p>
  * 前序遍历 首先遍历根节点，然后遍历左子树，最后遍历右子树。
  * <p>
  * 中序遍历 首先访问左子树，然后访问根节点，最后访问右子树。
@@ -16,12 +18,11 @@ public class BinaryTreeInorderTraversal {
 
   public List<Integer> inorderTraversal(TreeNode root) {
     if (root == null) {
-      return Collections.EMPTY_LIST;
+      return Collections.emptyList();
     }
 
     List<Integer> result = new ArrayList<>();
     inOrder(result, root);
-
     return result;
   }
 
@@ -37,5 +38,6 @@ public class BinaryTreeInorderTraversal {
     if (root.right != null) {
       inOrder(result, root.right);
     }
+
   }
 }
