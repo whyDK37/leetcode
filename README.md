@@ -77,3 +77,4 @@ leetcode
 - 陈浩的 [github](https://github.com/haoel/leetcode) [leetcode](https://leetcode.com/haoel/)
 - 朝光的 [github](https://github.com/hcghaha/algorithms-learning)  [leetcode](https://leetcode.com/huangchgu/) 
 - 云强的 [leetcode](https://leetcode.com/supermaster007/)
+- 光头哥 [leetcode](https://leetcode.com/stefanpochmann/)

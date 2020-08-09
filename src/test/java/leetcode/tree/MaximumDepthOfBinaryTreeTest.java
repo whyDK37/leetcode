@@ -1,8 +1,9 @@
-package leetcode;
+package leetcode.tree;
 
 import static org.testng.Assert.assertEquals;
 
 import leetcode.pojo.TreeNode;
+import leetcode.tree.MaximumDepthOfBinaryTree;
 import org.testng.annotations.Test;
 
 public class MaximumDepthOfBinaryTreeTest {

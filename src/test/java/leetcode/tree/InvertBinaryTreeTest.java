@@ -1,6 +1,7 @@
-package leetcode;
+package leetcode.tree;
 
 import leetcode.pojo.TreeNode;
+import leetcode.tree.InvertBinaryTree;
 import leetcode.util.TestUtil;
 import org.testng.annotations.Test;
 

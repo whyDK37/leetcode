@@ -1,7 +1,10 @@
-package leetcode;
+package leetcode.tree;
 
 import leetcode.pojo.TreeNode;
 
+/**
+ * https://leetcode.com/problems/invert-binary-tree/description/
+ */
 public class InvertBinaryTree {
 
   public TreeNode invertTree(TreeNode root) {
@@ -12,16 +15,19 @@ public class InvertBinaryTree {
   }
 
   private void doInvertTree(TreeNode root) {
+    // terminator
     if (root == null) {
       return;
     }
+    // process current logic
     TreeNode left = root.left;
-    TreeNode right = root.right;
-
+    root.left = root.right;
     root.right = left;
-    root.left = right;
 
-    doInvertTree(left);
-    doInvertTree(right);
+    // drill down
+    doInvertTree(root.left);
+    doInvertTree(root.right);
+
+    // restore current status
   }
 }

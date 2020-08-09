@@ -2,6 +2,11 @@ package leetcode.tree;
 
 import leetcode.pojo.TreeNode;
 
+/**
+ * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+ * <p>
+ * 光头哥 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/65225/4-lines-C%2B%2BJavaPythonRuby
+ */
 public class LowestCommonAncestorOfABinaryTree {
 
   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

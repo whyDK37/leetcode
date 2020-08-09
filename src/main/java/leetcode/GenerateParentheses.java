@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * https://leetcode.com/problems/generate-parentheses/
+ * <p>
  * Approach 2: Backtracking Intuition and Algorithm
  * <p>
  * Instead of adding '(' or ')' every time as in Approach 1, let's only add them when we know it
@@ -23,18 +25,22 @@ public class GenerateParentheses {
   }
 
   public void backtrack(List<String> ans, String cur, int open, int close, int max) {
-    if (cur.length() == max * 2) {
+    // terminator
+    if (open == max && close == max) {
       ans.add(cur);
       return;
     }
 
-    // start with open
-      if (open < max) {
-          backtrack(ans, cur + "(", open + 1, close, max);
-      }
-    // open is bigger than close
-      if (close < open) {
-          backtrack(ans, cur + ")", open, close + 1, max);
-      }
+    // process current logic
+
+    // drill down
+    if (open < max) {
+      backtrack(ans, cur + "(", open + 1, close, max);
+    }
+    if (close < open) {
+      backtrack(ans, cur + ")", open, close + 1, max);
+    }
+
+    // restore current status
   }
 }
