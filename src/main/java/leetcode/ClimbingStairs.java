@@ -1,6 +1,9 @@
 package leetcode;
 
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 /**
  * https://leetcode-cn.com/problems/Climbing-Stairs/
  *
@@ -29,20 +32,21 @@ package leetcode;
 public class ClimbingStairs {
 
   public int climbStairs(int n) {
-    if (n <= 0) {
-      return 0;
-    }
     if (n <= 2) {
       return n;
     }
 
-    int i1 = 1, i2 = 2, i3 = 3;
-    for (int i = 3; i <= n; i++) {
+    int i1 = 1, i2 = 2, i3 = 0;
+    for (int i = 2; i < n; i++) {
       i3 = i1 + i2;
       i1 = i2;
       i2 = i3;
     }
 
     return i3;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(Stream.of("ab,cd").collect(Collectors.toList()));
   }
 }

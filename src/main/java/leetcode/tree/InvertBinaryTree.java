@@ -3,12 +3,13 @@ package leetcode.tree;
 import leetcode.pojo.TreeNode;
 
 /**
- * https://leetcode.com/problems/invert-binary-tree/description/
+ * 226 https://leetcode.com/problems/invert-binary-tree/description/
  */
 public class InvertBinaryTree {
 
   public TreeNode invertTree(TreeNode root) {
 
+    // 递归函数
     doInvertTree(root);
 
     return root;
@@ -19,10 +20,11 @@ public class InvertBinaryTree {
     if (root == null) {
       return;
     }
+
     // process current logic
-    TreeNode left = root.left;
+    TreeNode tmp = root.left;
     root.left = root.right;
-    root.right = left;
+    root.right = tmp;
 
     // drill down
     doInvertTree(root.left);

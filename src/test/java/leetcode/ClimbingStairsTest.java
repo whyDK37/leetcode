@@ -9,12 +9,12 @@ public class ClimbingStairsTest {
   @Test
   public void testClimbStairs() {
     ClimbingStairs climbingStairs = new ClimbingStairs();
-    assertEquals(climbingStairs.climbStairs(6), 13);
-    assertEquals(climbingStairs.climbStairs(5), 8);
-    assertEquals(climbingStairs.climbStairs(4), 5);
-    assertEquals(climbingStairs.climbStairs(3), 3);
-    assertEquals(climbingStairs.climbStairs(2), 2);
-    assertEquals(climbingStairs.climbStairs(1), 1);
     assertEquals(climbingStairs.climbStairs(0), 0);
+    assertEquals(climbingStairs.climbStairs(1), 1);
+    assertEquals(climbingStairs.climbStairs(2), 2);
+    assertEquals(climbingStairs.climbStairs(3), 3);
+    assertEquals(climbingStairs.climbStairs(4), 5);
+    assertEquals(climbingStairs.climbStairs(5), 8);
+    assertEquals(climbingStairs.climbStairs(6), 13);
   }
 }
