@@ -12,7 +12,7 @@ public class PermutationsIITest {
 
     PermutationsII permutations = new PermutationsII();
 
-    List<List<Integer>> permute = permutations.permute(new int[]{1, 1, 2});
+    List<List<Integer>> permute = permutations.permuteUnique(new int[]{1, 1, 2});
     System.out.println(permute);
     assertEquals(permute.size(), 3);
   }

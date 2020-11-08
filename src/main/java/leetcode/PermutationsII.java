@@ -1,63 +1,41 @@
 package leetcode;
 
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Deque;
+import java.util.Arrays;
 import java.util.List;
 
 /**
  * https://leetcode-cn.com/problems/permutations-ii/
  * <p>
- * 本题和 Permutations 的区别就在递归函数中的 for 循环，如何判跳过的逻辑。
+ * 本题和 Permutations 的区别就在递归函数中的 for 循环，如何判跳过的逻辑。 首先对nums排序。 然后在for循环判断前一个如果一样并且访问过，则跳过
  */
 public class PermutationsII {
 
-  public List<List<Integer>> permute(int[] nums) {
-    if (nums.length == 0) {
-      return Collections.emptyList();
-    }
-    List<List<Integer>> res = new ArrayList<>();
-    Deque<Integer> stack = new ArrayDeque<>();
-    boolean[] used = new boolean[nums.length];
-    dfs(nums, 0, stack, used, res);
-    return res;
+  public List<List<Integer>> permuteUnique(int[] nums) {
+    List<List<Integer>> ans = new ArrayList<>();
+    List<Integer> perm = new ArrayList<>();
+    boolean[] vis = new boolean[nums.length];
+    Arrays.sort(nums);
+    backtrack(nums, ans, 0, vis, perm);
+    return ans;
   }
 
-  /**
-   * @param nums  数据集合
-   * @param depth 深度
-   * @param path  路径
-   * @param used  使用的数据集合标记
-   * @param res   结果
-   */
-  private void dfs(int[] nums, int depth, Deque<Integer> path, boolean[] used,
-      List<List<Integer>> res) {
-    // 终止条件
+  public void backtrack(int[] nums, List<List<Integer>> ans, int depth, boolean[] vis,
+      List<Integer> perm) {
     if (depth == nums.length) {
-      res.add(new ArrayList<>(path));
+      ans.add(new ArrayList<>(perm));
       return;
     }
-    for (int i = 0; i < nums.length; i++) {
-
-      // 当前层逻辑
-      if (used[i] || (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])) {
+    for (int i = 0; i < nums.length; ++i) {
+      if (vis[i] || (i > 0 && nums[i] == nums[i - 1] && !vis[i - 1])) {
         continue;
       }
-
-      // 当前层逻辑
-      path.addLast(nums[i]);
-      used[i] = true;
-
-      // 下探一层
-      dfs(nums, depth + 1, path, used, res);
-
-      // 清理当前层数据
-      path.removeLast();
-      used[i] = false;
-
+      perm.add(nums[i]);
+      vis[i] = true;
+      backtrack(nums, ans, depth + 1, vis, perm);
+      vis[i] = false;
+      perm.remove(depth);
     }
   }
-
 }
