@@ -8,38 +8,11 @@ import java.util.Deque;
 import java.util.List;
 
 /**
- * https://leetcode.com/problems/permutations/
+ * https://leetcode-cn.com/problems/permutations-ii/
  * <p>
- * https://leetcode-cn.com/problems/permutations/solution/quan-pai-lie-by-leetcode-solution-2/
+ * 本题和 Permutations 的区别就在递归函数中的 for 循环，如何判跳过的逻辑。
  */
-public class Permutations {
-
-  /**
-   * return permute(nums, 0);
-   *
-   * @param nums
-   * @param start
-   * @return
-   * @deprecated
-   */
-  @Deprecated
-  public List<List<Integer>> permute(int[] nums, int start) {
-    if (start == nums.length - 1) {
-      return Collections.singletonList(Collections.singletonList(nums[start]));
-    }
-
-    List<List<Integer>> ret = new ArrayList<>();
-
-    for (List<Integer> cur : permute(nums, start + 1)) {
-      for (int i = 0; i <= cur.size(); ++i) {
-        List<Integer> l = new ArrayList<>(cur);
-        l.add(i, nums[start]);
-        ret.add(l);
-      }
-    }
-
-    return ret;
-  }
+public class PermutationsII {
 
   public List<List<Integer>> permute(int[] nums) {
     if (nums.length == 0) {
@@ -69,7 +42,7 @@ public class Permutations {
     for (int i = 0; i < nums.length; i++) {
 
       // 当前层逻辑
-      if (used[i]) {
+      if (used[i] || (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])) {
         continue;
       }
 
