@@ -41,6 +41,9 @@ public class Permutations {
     return ret;
   }
 
+  // --------------------------------------------------------------
+  // dfs
+
   public List<List<Integer>> permute(int[] nums) {
     if (nums.length == 0) {
       return Collections.emptyList();
