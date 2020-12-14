@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * https://leetcode-cn.com/problems/majority-element-II/description/
+ */
 public class MajorityElementII {
 
   public List<Integer> majorityElement(int[] nums) {

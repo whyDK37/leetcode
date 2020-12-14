@@ -1,14 +1,18 @@
 package leetcode;
 
+/**
+ * https://leetcode.com/problems/powx-n/
+ */
 public class PowXN {
 
   public double myPow(double x, int n) {
-    // 防止越界
+    // 处理负数
     long N = n;
     if (N < 0) {
       x = 1 / x;
       N = -N;
     }
+
     double ans = 1;
     double current_product = x;
     for (long i = N; i > 0; i >>= 1) {

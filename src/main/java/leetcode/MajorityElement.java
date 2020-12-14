@@ -3,6 +3,9 @@ package leetcode;
 
 import java.util.Arrays;
 
+/**
+ * https://leetcode-cn.com/problems/majority-element/description/
+ */
 public class MajorityElement {
 
   public int majorityElement(int[] nums) {

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class LetterCombinationsOfAPhoneNumber {
 
-  private String[] LETTERS = new String[]{"", "",
+  private final String[] LETTERS = new String[]{"", "",
       "abc",
       "def",
       "ghi",
@@ -19,18 +19,18 @@ public class LetterCombinationsOfAPhoneNumber {
 
   public List<String> letterCombinations(String digits) {
     if (digits == null || digits.length() == 0) {
-      return Collections.EMPTY_LIST;
+      return Collections.emptyList();
     }
 
     char[] chars = digits.toCharArray();
     String[] letter = new String[chars.length];
-    int size = 1;
+
+    // 数字对应的字母数组
     for (int i = 0; i < chars.length; i++) {
       letter[i] = LETTERS[chars[i] - 48];
-      size *= letter[i].length();
     }
 
-    List<String> result = new ArrayList<>(size);
+    List<String> result = new ArrayList<>();
 
     buildCombination(result, letter, "", 0);
 
@@ -38,6 +38,7 @@ public class LetterCombinationsOfAPhoneNumber {
   }
 
   private void buildCombination(List<String> result, String[] letter, String pre, int index) {
+    // 终止条件，当最后一层时，把最后一个电话号码以此拼接 pre 即可
     if (letter.length == index + 1) {
       String s = letter[index];
       for (char c : s.toCharArray()) {

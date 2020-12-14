@@ -6,9 +6,10 @@ public class LetterCombinationsOfAPhoneNumberTest {
 
   @Test
   public void testLetterCombinations() {
-    System.out.println(new LetterCombinationsOfAPhoneNumber().letterCombinations("7"));
-    System.out.println(new LetterCombinationsOfAPhoneNumber().letterCombinations("234").size());
-    System.out.println(new LetterCombinationsOfAPhoneNumber().letterCombinations("234"));
-    System.out.println(new LetterCombinationsOfAPhoneNumber().letterCombinations("23"));
+    LetterCombinationsOfAPhoneNumber number = new LetterCombinationsOfAPhoneNumber();
+    System.out.println(number.letterCombinations("7"));
+    System.out.println(number.letterCombinations("234").size());
+    System.out.println(number.letterCombinations("234"));
+    System.out.println(number.letterCombinations("23"));
   }
 }
