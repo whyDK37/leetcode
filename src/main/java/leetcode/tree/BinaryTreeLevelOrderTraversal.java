@@ -8,13 +8,16 @@ import java.util.Queue;
 import leetcode.pojo.TreeNode;
 
 /**
- *
+ * https://leetcode-cn.com/problems/binary-tree-level-order-traversal/#/description
+ * 解法：
+ * 1. BFS
+ * 2. DFS 记录遍历的层，把元素加到
  */
 public class BinaryTreeLevelOrderTraversal {
 
   public List<List<Integer>> levelOrder(TreeNode root) {
     if (root == null) {
-      return Collections.EMPTY_LIST;
+      return Collections.emptyList();
     }
 
     List<List<Integer>> result = new LinkedList<>();
