@@ -1,149 +1,225 @@
-//评测题目: 无
-问题1：
-统计一篇文章中每个单词出现的次数（文章大小超过10G），
-例如输入：
-If not now when , if not me who?
-输出
-if 2
-not 2
-now 1
-when 1
-me 1
-who 1
-备注：文章已做过预处理，已将所有标点符号替换为空格。
+1. 设计并实现一个简易的缓存框架，要求支持并发的读写和LRU缓存淘汰算法，并考虑性能
 
+public class LRUCache {
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map.Entry;
+  private final int capacity;
+  LinkedHashMap<Integer, Integer> cache;
 
-
-public class CountWords {
-
-  public static void main(String[] args) throws IOException {
-    CountWords sw = new CountWords(10 * 1024 * 1024);// 用10M的缓冲读取文本文件
-    sw.count("D:/10G.txt");
-    sw.print();
+  public LRUCache(int capacity) {
+    cache = new LinkedHashMap<Integer, Integer>(capacity, 0.75F, true) {
+      @Override
+      protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+        return size() > capacity;
+      }
+    };
+    this.capacity = capacity;
   }
 
-  public CountWords(int sz) {
-    this.sz = sz;
+  public int get(int key) {
+    Integer value = cache.get(key);
+    return value == null ? -1 : value;
   }
 
-  final HashMap<String, Long> hashMap = new HashMap<>(1024);
-  final int sz;
+  public void put(int key, int value) {
+    cache.put(key, value);
+  }
+}
 
 
-  public void count(String src) throws IOException {
-    File file = new File(src);
-    if (!file.exists()) {
-      System.out.println("文件不存在");
+2. 编写一个程序，开启3个线程，
+这3个线程的ID分别为A、B、C，3个线程交替打印1-100的整数，要求输出结果有序,
+  样例Sample:
+Thread1: 1
+Thread2: 2
+Thread3: 3
+Thread1: 4
+Thread2: 5
+Thread3: 6
+....
+Thread3: 99
+Thread1: 100
+
+
+public class ThreadPrintMain {
+
+  public static void main(String[] args) throws InterruptedException {
+    ThreadPrintMain threadPrint = new ThreadPrintMain(3, 100);
+    threadPrint.runThread();
+  }
+
+  private volatile int i = 0;
+  private Thread[] threads;
+  private volatile int flag = 0;
+  final int threadNum;
+  private final int sum;
+
+  public ThreadPrintMain(int threadNum, int sum) {
+    this.threadNum = threadNum;
+    this.sum = sum;
+  }
+
+  public void runThread() throws InterruptedException {
+    threads = new Thread[threadNum];
+    for (int j = 0; j < threadNum; j++) {
+      threads[j] = new Thread(new PrintThread(j));
+      threads[j].setName("thread" + (j + 1));
+    }
+    for (Thread thread : threads) {
+      thread.start();
+    }
+  }
+
+  public class PrintThread implements Runnable {
+
+    int num = 0;
+
+    public PrintThread(int num) {
+      this.num = num;
+    }
+
+    public void run() {
+      while (i < sum) {
+        if (flag == num) {
+          System.out.println(Thread.currentThread().getName() + ":" + (++i));
+          flag = (num + 1) == threadNum ? 0 : num + 1;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+
+3. 遍历一个二叉树，打印出该路径中每个节点数字的和与给定目标值一致的有效路径。
+有效路径：从根节点到叶节点的路径。
+给定一个二叉树 :
+       1
+    / \
+   2   4
+  / \
+ 2   3
+目标值= 5时返回结果：
+1 2 2
+1 4
+
+
+public class TreeSum {
+
+  public static void main(String[] args) {
+    TreeSum sum = new TreeSum();
+    List<List<Integer>> lists = sum.pathSum(new TreeNode(1
+        , new TreeNode(2, new TreeNode(2), new TreeNode(3)), new TreeNode(4)), 5);
+
+    for (List<Integer> list : lists) {
+      System.out.println(list);
+    }
+  }
+
+  public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    if (root == null) {
+      return Collections.emptyList();
+    }
+
+    List<List<Integer>> result = new ArrayList<>();
+    dfs(result, root, new ArrayList<>(), 0, sum);
+    return result;
+  }
+
+  private void dfs(List<List<Integer>> result, TreeNode root, List<Integer> res, int pathSum,
+      int sum) {
+    if (pathSum == sum && root == null) {
+      result.add(res);
+      return;
+    }
+    if (root == null) {
       return;
     }
 
-    BufferedInputStream fis = new BufferedInputStream(new FileInputStream(file));
-    BufferedReader reader = new BufferedReader(new InputStreamReader(fis, StandardCharsets.UTF_8),
-        sz);//
+    ArrayList<Integer> nextLevel = new ArrayList<>(res);
+    nextLevel.add(root.val);
 
-    String line;
-    while ((line = reader.readLine()) != null) {
-      String[] lineWords = line.split(" ");
-
-      for (String lineWord : lineWords) {
-        lineWord = lineWord.trim();
-        if ("".equals(lineWord)) {
-          continue;
-        }
-        //如果已经有这个单词了，
-        if (hashMap.containsKey(lineWord)) {
-          long number = hashMap.get(lineWord);
-          hashMap.put(lineWord, number + 1);
-        } else {
-          hashMap.put(lineWord, 1L);
-        }
-      }
-
-    }
-    System.out.println("文件统计结束");
-  }
-
-  public void print() {
-    System.out.println("-----------统计单词完成，所有文件单词总数为-------------------");
-    for (Entry<String, Long> wordCount : hashMap.entrySet()) {
-      System.out.printf("单词:%-12s 出现次数:%d\n", wordCount.getKey(), wordCount.getValue());
+    if (root.left == null && root.right == null) {
+      dfs(result, root.left, nextLevel, pathSum + root.val, sum);
+    } else {
+      dfs(result, root.left, nextLevel, pathSum + root.val, sum);
+      dfs(result, root.right, nextLevel, pathSum + root.val, sum);
     }
   }
 }
 
 
-问题2：
-现需做一个部门管理功能，如公司有多个大部门A、B、C...，每个部门下面有多个子部门，子部门还有子部门以此类推，
-如部门A下面有部门AB、AC、AD，部门AB下面有AE、AF，部门AC下面有AG、AH、AI，部门AE下面有AJ等，每个部门的子部门个数和部门的层数均为无限，
-每个部门的父部门要么没有要么是一个。
-针对上述需求完成如下题目：
-1，设计表结构存储上述部门关系；
-2，定义领域模型Department类；
-3，实现删除部门方法：void delete(Integer departmentId)，要求删除指定部门的同时删除其下面的所有层级的子部门，
-   如删除部门AB的同时要删除它的子部门AE、AF和AE的子部门AJ；
-4，实现获取所有部门信息及其关系的方法：List<Department> getDepartments()；
-备注：第3、第4问代码中涉及到的DB操作用一段注释或SQL表明是什么DB操作即可
 
-CREATE TABLE `test`.`dept`(
-  `department_Id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '部门id',
-  `department_name` VARCHAR(50) NOT NULL COMMENT '部门名称',
-  `parent_department_Id` BIGINT NOT NULL COMMENT '上级部门id',
-  PRIMARY KEY (`department_Id`)
-);
+4. 使用两个栈来实现队列的一些操作。
+队列应支持push(element)，pop() 和 top()，其中pop是弹出队列中的第一个(最前面的)元素。
+pop和top方法都应该返回第一个元素的值。
+样例：比如push(1), pop(), push(2), push(3), top(), pop()，你应该返回1，2和2
+要求：仅使用两个栈来实现它，不使用任何其他数据结构，push，pop 和 top的复杂度都应该是均摊O(1)的
 
 
-public class Department {
+public class Queue {
 
-  private long departmentId;
-  private String departmentName;
-  private long parenDepartmentId;
+  public static void main(String[] args) {
+    Queue queue = new Queue();
+    queue.push(1);
+    System.out.println(queue.pop());
+    queue.push(2);
+    queue.push(3);
+    System.out.println(queue.top());
+    System.out.println(queue.pop());
+    System.out.println(queue.top());
+  }
 
-  void delete(Integer departmentId) {
-    Department department = null;//  sql 查询 departmentId
-    if (department == null) {
-      // 根据场景返回异常
-      return;
-    }
+  Stack<Integer> stack1 = new Stack<>();
+  Stack<Integer> stack2 = new Stack<>();
 
-    // 获取所有下级部门 id
-    List<Long> ids = new ArrayList<>();
-    ids.add(department.departmentId);
-    List<Long> current = new ArrayList<>();
-    current.add(department.departmentId);
-    do {
-      // sql 通过 current 获取所有下级 部门
-      List<Department> subDepartment = null;
-      current.clear();
-      if (subDepartment != null && !subDepartment.isEmpty()) {
-        for (Department department1 : subDepartment) {
-          ids.add(department1.departmentId);
-          current.add(department1.departmentId);
-        }
+  public void push(int num) {
+    stack1.push(num);
+  }
+
+  public int top() {
+    Integer re = null;
+    if (!stack2.empty()) {
+      re = stack2.pop();
+    } else {
+      while (!stack1.empty()) {
+        re = stack1.pop();
+        stack2.push(re);
       }
-    } while (!current.isEmpty());
-
-    // sql 删除所有 ids 中的部门
-
+      if (!stack2.empty()) {
+        re = stack2.peek();
+      }
+    }
+    return re;
   }
 
-  List<Department> getDepartments() {
-    // 查询 parent_department_Id == 0 的所有部门
-    // 可以调用每个对象的 #getSubDepartment 方法获取下级部门
-    return null;
+  //出栈函数
+  public int pop() {
+    Integer re = null;
+    if (!stack2.empty()) {
+      re = stack2.pop();
+    } else {
+      while (!stack1.empty()) {
+        re = stack1.pop();
+        stack2.push(re);
+      }
+      if (!stack2.empty()) {
+        re = stack2.pop();
+      }
+    }
+    return re;
   }
-
-  List<Department> getSubDepartment() {
-    // sql 查询下一级 department
-  }
-
 }
+
+
+
+5. 比较一个源字符串和一个目标字符串，
+如果在源字符串中包含目标字符串全部字符，输出所包含的第一个最小子串；
+如果不存在，输出空。
+：样例
+source = "BPDAUNZHGAHSIWBADNC"，target = "BDN" 满足要求的解  "BADN"
+要求：时间复杂度为O(n^2)
+
+  

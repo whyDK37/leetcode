@@ -9,8 +9,8 @@ import java.util.Set;
 public class LongestSubString {
 
   public static void main(String[] args) {
-    System.out.println(longest2(new int[]{2, 2, 3, 4, 3, 2, 1}));
-//    System.out.println(longest2(new int[]{2, 3, 4, 5}));
+    System.out.println(4 + "->" + longest2(new int[]{2, 2, 3, 4, 3, 2, 1}));
+    System.out.println(4 + "->" + longest2(new int[]{2, 3, 4, 5}));
   }
 
   public static int longest(int[] ints) {
@@ -21,24 +21,22 @@ public class LongestSubString {
     int max = 0;
     // 保存不同的数字
     List<Integer> nums = new LinkedList<>();
-    for (int i = 0; i < ints.length; i++) {
+    for (int anInt : ints) {
       // 存在相同的数字，移除相同数字之前的所有数字
-      if (nums.contains(ints[i])) {
+      if (nums.contains(anInt)) {
         Iterator<Integer> iterator = nums.iterator();
         while (iterator.hasNext()) {
           Integer next = iterator.next();
-          if (next != ints[i]) {
-            iterator.remove();
-          } else {
+          // 删除相同的数字，并添加到集合末尾
+          iterator.remove();
+          if (next == anInt) {
             break;
           }
         }
-        // 删除相同的数字，并添加到集合末尾
-        iterator.remove();
-        nums.add(ints[i]);
+        nums.add(anInt);
       } else {
         // 新的数字添加到集合中，并计算最大值
-        nums.add(ints[i]);
+        nums.add(anInt);
         max = Math.max(max, nums.size());
       }
     }

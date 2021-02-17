@@ -10,13 +10,6 @@ public class ImplementQueueUsingStacks {
     Stack<Integer> out = new Stack<>();
 
     /**
-     * Initialize your data structure here.
-     */
-    public MyQueue() {
-
-    }
-
-    /**
      * Push element x to the back of queue.
      */
     public void push(int x) {
@@ -27,11 +20,11 @@ public class ImplementQueueUsingStacks {
      * Removes the element from in front of queue and returns that element.
      */
     public int pop() {
-      if (out.size() != 0) {
+      if (!out.isEmpty()) {
         return out.pop();
       }
 
-      while (in.size() > 0) {
+      while (!in.isEmpty()) {
         out.push(in.pop());
       }
 
@@ -42,11 +35,11 @@ public class ImplementQueueUsingStacks {
      * Get the front element.
      */
     public int peek() {
-      if (out.size() != 0) {
+      if (!out.isEmpty()) {
         return out.peek();
       }
 
-      while (in.size() > 0) {
+      while (!in.isEmpty()) {
         out.push(in.pop());
       }
 
@@ -61,11 +54,4 @@ public class ImplementQueueUsingStacks {
     }
   }
 
-  public static void main(String[] args) {
-    MyQueue obj = new MyQueue();
-    obj.push(1);
-    System.out.println("obj.peek() = " + obj.peek());
-    System.out.println("obj.pop() = " + obj.pop());
-    System.out.println("obj.empty() = " + obj.empty());
-  }
 }
