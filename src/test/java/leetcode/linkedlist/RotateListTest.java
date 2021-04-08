@@ -11,10 +11,10 @@ public class RotateListTest {
     public void test(){
         RotateList rotateList = new RotateList();
 
-        System.out.println(rotateList.rotateRight(ListNodeUtil.createListNode(0, 1, 2), 1));
-        System.out.println(rotateList.rotateRight(ListNodeUtil.createListNode(0, 1, 2), 2));
-        System.out.println(rotateList.rotateRight(ListNodeUtil.createListNode(0, 1, 2), 3));
-        System.out.println(rotateList.rotateRight(ListNodeUtil.createListNode(0, 1, 2), 4));
+        assertEquals(ListNodeUtil.printListNode(rotateList.rotateRight(ListNodeUtil.createListNode(0, 1, 2), 1)),"[2->0->1]");;
+        assertEquals(ListNodeUtil.printListNode(rotateList.rotateRight(ListNodeUtil.createListNode(0, 1, 2), 2)),"[1->2->0]");;
+        assertEquals(ListNodeUtil.printListNode(rotateList.rotateRight(ListNodeUtil.createListNode(0, 1, 2), 3)),"[0->1->2]");;
+        assertEquals(ListNodeUtil.printListNode(rotateList.rotateRight(ListNodeUtil.createListNode(0, 1, 2), 4)),"[2->0->1]");;
     }
 
 }

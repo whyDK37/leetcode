@@ -35,10 +35,10 @@ public class ListNodeUtil {
     return sentinal.next;
   }
 
-  public static void printListNode(ListNode listNode) {
+  public static String printListNode(ListNode listNode) {
     if (listNode == null) {
       System.out.println("[]");
-      return;
+      return "[]";
     }
 
     ListNode next = listNode;
@@ -49,5 +49,6 @@ public class ListNodeUtil {
     }
     sb.delete(sb.length() - 2, sb.length());
     System.out.println("[" + sb + "]");
+    return "[" + sb + "]";
   }
 }
