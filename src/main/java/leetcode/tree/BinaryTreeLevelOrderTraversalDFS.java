@@ -12,7 +12,7 @@ public class BinaryTreeLevelOrderTraversalDFS {
 
   public List<List<Integer>> levelOrder(TreeNode root) {
     if (root == null) {
-      return Collections.EMPTY_LIST;
+      return Collections.emptyList();
     }
 
     List<List<Integer>> result = new ArrayList<>();

@@ -12,4 +12,11 @@ public class MajorityElementTest {
     assertEquals(majorityElement.majorityElement(new int[]{3, 2, 3}), 3);
     assertEquals(majorityElement.majorityElement(new int[]{2, 2, 1, 1, 1, 2, 2}), 2);
   }
+
+  @Test
+  public void testMajorityElementV2() {
+    MajorityElement_v2 majorityElement = new MajorityElement_v2();
+    assertEquals(majorityElement.majorityElement(new int[]{3, 2, 3}), 3);
+    assertEquals(majorityElement.majorityElement(new int[]{2, 2, 1, 1, 1, 2, 2}), 2);
+  }
 }
