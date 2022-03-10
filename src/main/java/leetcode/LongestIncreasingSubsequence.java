@@ -1,9 +1,11 @@
 package leetcode;
 
+/**
+ * 300 https://leetcode-cn.com/problems/longest-increasing-subsequence/
+ */
 public class LongestIncreasingSubsequence {
 
   public int lengthOfLIS(int[] nums) {
-
     if (nums.length == 0) {
       return 0;
     }
