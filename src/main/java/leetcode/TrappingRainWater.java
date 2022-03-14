@@ -1,6 +1,9 @@
 package leetcode;
 
 
+/**
+ * 42 https://leetcode-cn.com/problems/trapping-rain-water/
+ */
 public class TrappingRainWater {
 
   public int trap(int[] height) {
