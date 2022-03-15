@@ -49,9 +49,8 @@ public class PrintFoobarAlternately {
 
   static class FooBar {
 
-    private int n;
-
     SynchronousQueue<Boolean> queue = new SynchronousQueue<>(true);
+    private final int n;
 
     public FooBar(int n) {
       this.n = n;

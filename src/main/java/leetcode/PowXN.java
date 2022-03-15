@@ -5,6 +5,16 @@ package leetcode;
  */
 public class PowXN {
 
+  public static void main(String[] args) {
+    int n = -12;
+    echo(n);
+  }
+
+  private static void echo(int n) {
+    n = -n;
+    System.out.println(n);
+  }
+
   public double myPow(double x, int n) {
     // 处理负数
     long N = n;
@@ -23,15 +33,5 @@ public class PowXN {
       current_product = current_product * current_product;
     }
     return ans;
-  }
-
-  public static void main(String[] args) {
-    int n = -12;
-    echo(n);
-  }
-
-  private static void echo(int n) {
-    n = -n;
-    System.out.println(n);
   }
 }

@@ -1,8 +1,7 @@
 package leetcode;
 
 /**
- * https://leetcode.com/problems/powx-n/
- * 分支实现
+ * https://leetcode.com/problems/powx-n/ 分支实现
  */
 public class PowXN2 {
 

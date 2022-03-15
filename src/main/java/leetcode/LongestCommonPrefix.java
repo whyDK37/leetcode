@@ -7,6 +7,13 @@ import org.testng.Assert;
  */
 public class LongestCommonPrefix {
 
+  public static void main(String[] args) {
+    LongestCommonPrefix prefix = new LongestCommonPrefix();
+    Assert.assertEquals(prefix.longestCommonPrefix(new String[]{"hello", "hello"}), "hello");
+    Assert.assertEquals(prefix.longestCommonPrefix(new String[]{"flower", "flow", "flight"}), "fl");
+    Assert.assertEquals(prefix.longestCommonPrefix(new String[]{"dog", "racecar", "car"}), "");
+  }
+
   public String longestCommonPrefix(String[] strs) {
     if (strs == null || strs.length == 0) {
       return "";
@@ -22,12 +29,5 @@ public class LongestCommonPrefix {
       }
     }
     return pre;
-  }
-
-  public static void main(String[] args) {
-    LongestCommonPrefix prefix = new LongestCommonPrefix();
-    Assert.assertEquals(prefix.longestCommonPrefix(new String[]{"hello", "hello"}), "hello");
-    Assert.assertEquals(prefix.longestCommonPrefix(new String[]{"flower", "flow", "flight"}), "fl");
-    Assert.assertEquals(prefix.longestCommonPrefix(new String[]{"dog", "racecar", "car"}), "");
   }
 }

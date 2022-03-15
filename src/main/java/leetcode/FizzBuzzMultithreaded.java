@@ -7,12 +7,11 @@ public class FizzBuzzMultithreaded {
 
   static class FizzBuzz {
 
-    private int n;
-
     Semaphore fizz = new Semaphore(0);
     Semaphore buzz = new Semaphore(0);
     Semaphore fizzbuzz = new Semaphore(0);
     Semaphore num = new Semaphore(1);
+    private final int n;
 
     public FizzBuzz(int n) {
       this.n = n;

@@ -7,8 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * 229. 求众数 II
- * https://leetcode-cn.com/problems/majority-element-II/description/
+ * 229. 求众数 II https://leetcode-cn.com/problems/majority-element-II/description/
  */
 public class MajorityElementII {
 

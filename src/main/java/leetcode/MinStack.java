@@ -49,20 +49,6 @@ public class MinStack {
     return minNode[minSize - 1].val;
   }
 
-  /**
-   * 最小数字和最小数字对应的栈下标
-   */
-  class MinNode {
-
-    int index;
-    int val;
-
-    public MinNode(int index, int val) {
-      this.index = index;
-      this.val = val;
-    }
-  }
-
   private void tryAddMin(int x) {
     int minTmp = Math.min(minNode[minSize - 1].val, x);
     if (minTmp < minNode[minSize - 1].val) {
@@ -78,6 +64,20 @@ public class MinStack {
   private void tryRemoveMin() {
     if (minNode[minSize - 1].index == (size - 1)) {
       minNode[--minSize] = null;
+    }
+  }
+
+  /**
+   * 最小数字和最小数字对应的栈下标
+   */
+  class MinNode {
+
+    int index;
+    int val;
+
+    public MinNode(int index, int val) {
+      this.index = index;
+      this.val = val;
     }
   }
 }

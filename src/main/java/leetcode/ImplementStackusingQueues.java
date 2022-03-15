@@ -5,6 +5,20 @@ import java.util.Queue;
 
 public class ImplementStackusingQueues {
 
+  public static void main(String[] args) {
+    MyStack obj = new MyStack();
+    obj.push(1);
+
+    obj.push(2);
+    obj.push(3);
+    System.out.println("obj.top() = " + obj.top());
+    System.out.println("obj.top() = " + obj.top());
+    System.out.println("obj.pop() = " + obj.pop());
+    System.out.println("obj.pop() = " + obj.pop());
+    System.out.println("obj.pop() = " + obj.pop());
+    System.out.println("obj.empty() = " + obj.empty());
+  }
+
   static class MyStack {
 
     Queue<Integer> queue = new LinkedList<>();
@@ -67,19 +81,5 @@ public class ImplementStackusingQueues {
     public boolean empty() {
       return queue.isEmpty();
     }
-  }
-
-  public static void main(String[] args) {
-    MyStack obj = new MyStack();
-    obj.push(1);
-
-    obj.push(2);
-    obj.push(3);
-    System.out.println("obj.top() = " + obj.top());
-    System.out.println("obj.top() = " + obj.top());
-    System.out.println("obj.pop() = " + obj.pop());
-    System.out.println("obj.pop() = " + obj.pop());
-    System.out.println("obj.pop() = " + obj.pop());
-    System.out.println("obj.empty() = " + obj.empty());
   }
 }

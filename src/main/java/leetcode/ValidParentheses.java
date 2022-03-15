@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class ValidParentheses {
 
-  private static Map<Character, Character> characterMap = new HashMap<>(5);
+  private static final Map<Character, Character> characterMap = new HashMap<>(5);
 
   static {
     characterMap.put(')', '(');

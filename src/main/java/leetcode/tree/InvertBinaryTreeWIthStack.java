@@ -5,8 +5,7 @@ import java.util.LinkedList;
 import leetcode.pojo.TreeNode;
 
 /**
- * 226 https://leetcode.com/problems/invert-binary-tree/description/
- * 由于使用应用程序的栈保存调用信息，可能会有栈溢出的风险。
+ * 226 https://leetcode.com/problems/invert-binary-tree/description/ 由于使用应用程序的栈保存调用信息，可能会有栈溢出的风险。
  * 针对这个问题，可以使用代码维护调用栈的方式提高应用程序的健壮性。
  */
 public class InvertBinaryTreeWIthStack {

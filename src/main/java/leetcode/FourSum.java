@@ -6,6 +6,14 @@ import java.util.List;
 
 public class FourSum {
 
+  public static void main(String[] args) {
+    FourSum fourSum = new FourSum();
+    List<List<Integer>> lists = fourSum.fourSum(new int[]{1, 0, -1, 0, -2, 2}, 0);
+    for (List<Integer> list : lists) {
+      System.out.println(list);
+    }
+  }
+
   public List<List<Integer>> fourSum(int[] nums, int target) {
     if (nums == null || nums.length < 4) {
       return new ArrayList<>();
@@ -66,13 +74,5 @@ public class FourSum {
       }
     }
     return ans;
-  }
-
-  public static void main(String[] args) {
-    FourSum fourSum = new FourSum();
-    List<List<Integer>> lists = fourSum.fourSum(new int[]{1, 0, -1, 0, -2, 2}, 0);
-    for (List<Integer> list : lists) {
-      System.out.println(list);
-    }
   }
 }

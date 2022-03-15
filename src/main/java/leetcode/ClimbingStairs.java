@@ -31,6 +31,10 @@ import java.util.stream.Stream;
  */
 public class ClimbingStairs {
 
+  public static void main(String[] args) {
+    System.out.println(Stream.of("ab,cd").collect(Collectors.toList()));
+  }
+
   public int climbStairs(int n) {
     if (n <= 2) {
       return n;
@@ -44,9 +48,5 @@ public class ClimbingStairs {
     }
 
     return i3;
-  }
-
-  public static void main(String[] args) {
-    System.out.println(Stream.of("ab,cd").collect(Collectors.toList()));
   }
 }

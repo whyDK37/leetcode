@@ -9,12 +9,12 @@ public class SerializeAndDeserializeBinaryTree {
 
   // Encodes a tree to a single string.
   public String serialize(TreeNode root) {
-    if(root==null){
+    if (root == null) {
       return "X";
     }
     String l = "(" + serialize(root.left) + ")";
     String r = "(" + serialize(root.right) + ")";
-    return  l + root.val + r;
+    return l + root.val + r;
   }
 
   // Decodes your encoded data to tree.

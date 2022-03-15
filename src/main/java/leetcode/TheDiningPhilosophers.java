@@ -8,8 +8,8 @@ public class TheDiningPhilosophers {
 
   static class DiningPhilosophers {
 
-    private Lock forks[] = new Lock[5];
-    private Semaphore semaphore = new Semaphore(4);
+    private final Lock[] forks = new Lock[5];
+    private final Semaphore semaphore = new Semaphore(4);
 
     public DiningPhilosophers() {
       for (int i = 0; i < 5; i++) {

@@ -8,13 +8,12 @@ public class PrintZeroEvenOdd {
 
   static class ZeroEvenOdd {
 
-    private int n;
-    private volatile int counter = 0;
-
     Semaphore zero = new Semaphore(1);
     Semaphore even = new Semaphore(0);
     Semaphore odd = new Semaphore(0);
     boolean endWithOdd;
+    private final int n;
+    private final int counter = 0;
 
     public ZeroEvenOdd(int n) {
       this.n = n;

@@ -11,9 +11,8 @@ import java.util.Map;
  */
 public class LFUCache {
 
+  private static final LinkedHashMap<Integer, CacheEntry> cacheMap = new LinkedHashMap<>();
   private final int initialCapacity;
-
-  private static LinkedHashMap<Integer, CacheEntry> cacheMap = new LinkedHashMap<>();
   /* LinkedHashMap is used because it has features of both HashMap and LinkedList.
    * Thus, we can get an entry in O(1) and also, we can iterate over it easily.
    * */
@@ -21,34 +20,6 @@ public class LFUCache {
   public LFUCache(int capacity) {
     this.initialCapacity = capacity;
   }
-
-  class CacheEntry {
-
-    private int data;
-    private int frequency;
-
-    // default constructor
-    private CacheEntry() {
-    }
-
-    public int getData() {
-      return data;
-    }
-
-    public void setData(int data) {
-      this.data = data;
-    }
-
-    public int getFrequency() {
-      return frequency;
-    }
-
-    public void setFrequency(int frequency) {
-      this.frequency = frequency;
-    }
-
-  }
-
 
   public void put(int key, int data) {
     if (!isFull()) {
@@ -83,7 +54,6 @@ public class LFUCache {
     return key;
   }
 
-
   private boolean isFull() {
     return cacheMap.size() == initialCapacity;
   }
@@ -96,6 +66,33 @@ public class LFUCache {
       return temp.data;
     }
     return -1; // cache miss
+  }
+
+  class CacheEntry {
+
+    private int data;
+    private int frequency;
+
+    // default constructor
+    private CacheEntry() {
+    }
+
+    public int getData() {
+      return data;
+    }
+
+    public void setData(int data) {
+      this.data = data;
+    }
+
+    public int getFrequency() {
+      return frequency;
+    }
+
+    public void setFrequency(int frequency) {
+      this.frequency = frequency;
+    }
+
   }
 
 }
