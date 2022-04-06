@@ -2,6 +2,7 @@ package leetcode.tree;
 
 import java.util.List;
 import leetcode.pojo.TreeNode;
+import leetcode.tree.traversal.BinaryTreeInorderTraversal;
 import org.testng.annotations.Test;
 
 public class BinaryTreeInorderTraversalTest {

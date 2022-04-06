@@ -3,6 +3,7 @@ package leetcode.tree;
 import com.google.common.collect.Lists;
 import java.util.List;
 import leetcode.pojo.Node;
+import leetcode.tree.traversal.NAryTreeLevelOrderTraversal;
 import org.testng.annotations.Test;
 
 public class NAryTreeLevelOrderTraversalTest {

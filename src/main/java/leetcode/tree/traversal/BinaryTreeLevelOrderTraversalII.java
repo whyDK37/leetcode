@@ -1,4 +1,4 @@
-package leetcode.tree;
+package leetcode.tree.traversal;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,7 +13,7 @@ public class BinaryTreeLevelOrderTraversalII {
 
   public List<List<Integer>> levelOrderBottom(TreeNode root) {
     if (root == null) {
-      return Collections.EMPTY_LIST;
+      return Collections.emptyList();
     }
 
     List<List<Integer>> result = new LinkedList<>();

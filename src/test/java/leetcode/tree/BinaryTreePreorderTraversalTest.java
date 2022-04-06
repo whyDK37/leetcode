@@ -1,9 +1,8 @@
 package leetcode.tree;
 
-import static org.testng.Assert.*;
-
 import java.util.List;
 import leetcode.pojo.TreeNode;
+import leetcode.tree.traversal.BinaryTreePreorderTraversal;
 import org.testng.annotations.Test;
 
 public class BinaryTreePreorderTraversalTest {

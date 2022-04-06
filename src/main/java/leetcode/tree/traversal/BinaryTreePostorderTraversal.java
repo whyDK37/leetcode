@@ -1,4 +1,4 @@
-package leetcode.tree;
+package leetcode.tree.traversal;
 
 import java.util.Collections;
 import java.util.LinkedList;

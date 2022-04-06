@@ -1,4 +1,4 @@
-package leetcode.tree;
+package leetcode.tree.traversal;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,9 +11,9 @@ import leetcode.pojo.Node;
  * <p>
  * https://leetcode.com/problems/n-ary-tree-postorder-traversal/
  */
-public class NAryTreePostorderTraversal {
+public class NAryTreePreorderTraversal {
 
-  public List<Integer> postorder(Node root) {
+  public List<Integer> preorder(Node root) {
     if (root == null) {
       return Collections.emptyList();
     }
@@ -30,11 +30,11 @@ public class NAryTreePostorderTraversal {
     if (root == null) {
       return;
     }
+    result.add(root.val);
     if (root.children != null && !root.children.isEmpty()) {
       for (Node child : root.children) {
         innerPostOrder(result, child);
       }
     }
-    result.add(root.val);
   }
 }

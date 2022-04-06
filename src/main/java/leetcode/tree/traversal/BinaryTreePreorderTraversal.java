@@ -1,4 +1,4 @@
-package leetcode.tree;
+package leetcode.tree.traversal;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.Stack;
 import leetcode.pojo.TreeNode;
 
 /**
- * https://leetcode.com/problems/binary-tree-preorder-traversal/
+ * 144 https://leetcode.com/problems/binary-tree-preorder-traversal/
  */
 public class BinaryTreePreorderTraversal {
 
@@ -26,8 +26,7 @@ public class BinaryTreePreorderTraversal {
       TreeNode pop = stack.pop();
       // 获取前序
       result.add(pop.val);
-      // 因为栈是 LFFO
-      // 所以先入栈 right ，再入栈 left
+      // 因为栈是 LFFO , 所以先入栈 right ，再入栈 left
       if (pop.right != null) {
         stack.push(pop.right);
       }
@@ -36,20 +35,5 @@ public class BinaryTreePreorderTraversal {
       }
     }
     return result;
-  }
-
-  private void preOrder(List<Integer> result, TreeNode root) {
-    if (root == null) {
-      return;
-    }
-
-    result.add(root.val);
-    if (root.left != null) {
-      preOrder(result, root.left);
-    }
-    if (root.right != null) {
-      preOrder(result, root.right);
-    }
-
   }
 }
