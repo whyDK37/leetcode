@@ -1,7 +1,7 @@
 package leetcode;
 
 /**
- *
+ * 21 https://leetcode-cn.com/problems/merge-two-sorted-lists/
  */
 public class MergeTwoSortedLists {
 
@@ -9,7 +9,7 @@ public class MergeTwoSortedLists {
     ListNode sentinel = new ListNode(-1);
     ListNode cur = sentinel;
     while (l1 != null || l2 != null) {
-      ListNode next = null;
+      ListNode next;
       if (l1 == null) {
         next = l2;
         l2 = l2.next;

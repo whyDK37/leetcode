@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+/**
+ * 20 https://leetcode-cn.com/problems/valid-parentheses/
+ */
 public class ValidParentheses {
 
   private static final Map<Character, Character> characterMap = new HashMap<>(5);
