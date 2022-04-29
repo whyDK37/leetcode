@@ -3,6 +3,9 @@ package leetcode;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/**
+ * 239 https://leetcode-cn.com/problems/sliding-window-maximum/
+ */
 public class SlidingWindowMaximum {
 
   public int[] maxSlidingWindow(int[] nums, int k) {
